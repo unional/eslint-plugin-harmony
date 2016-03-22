@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'airbnb/base',
+  extends: 'eslint:recommended',
   rules: {
     // Best Practices
     complexity: [2, 25],
