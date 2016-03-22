@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config-unional",
+  "version": "0.1.6",
+  "description": "eslint extend package",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/eslint-config-unional"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Unional",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unional/eslint-config-unional/issues"
+  },
+  "homepage": "https://github.com/unional/eslint-config-unional",
+  "dependencies": {
+    "eslint-config-airbnb": "^3.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=1.0.0"
+  }
+}
