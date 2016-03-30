@@ -5,7 +5,7 @@ module.exports = {
     complexity: [2, 25],
 
     // Variables
-    'no-use-before-define: ['error', 'nofunc'],
+    'no-use-before-define': ['error', 'nofunc'],
 
     // Stylistic Issues
     'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }]
