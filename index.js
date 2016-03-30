@@ -4,7 +4,10 @@ module.exports = {
     // Best Practices
     complexity: [2, 25],
 
+    // Variables
+    'no-use-before-define: ['error', 'nofunc'],
+
     // Stylistic Issues
-    'brace-style': [2, 'stroustrup', { 'allowSingleLine': true }]
+    'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }]
   }
 };
