@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/unional/eslint-config-unional",
   "peerDependencies": {
-    "eslint": "^2.4.0"
+    "eslint": ">=2.4.0"
   }
 }
