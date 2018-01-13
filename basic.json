@@ -1,0 +1,16 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-use-before-define": [
+      2,
+      "nofunc"
+    ],
+    "brace-style": [
+      2,
+      "stroustrup",
+      {
+        "allowSingleLine": true
+      }
+    ]
+  }
+}

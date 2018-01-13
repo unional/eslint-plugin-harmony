@@ -1,8 +1,13 @@
 {
   "name": "eslint-config-unional",
-  "version": "0.2.3",
-  "description": "eslint extend package",
-  "main": "index.js",
+  "version": "0.0.0-development",
+  "description": "eslint config",
+  "main": "basic.json",
+  "scripts": {
+    "test": "gulp",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/unional/eslint-config-unional"
@@ -21,6 +26,16 @@
   },
   "homepage": "https://github.com/unional/eslint-config-unional",
   "peerDependencies": {
-    "eslint": ">=2.4.0"
+    "eslint": ">=4.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "lodash.uniq": "^4.5.0",
+    "semantic-release": "^12.2.1",
+    "through": "^2.3.8",
+    "travis-deploy-once": "^4.3.1"
   }
 }

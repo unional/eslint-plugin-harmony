@@ -1,0 +1,11 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "basic.json",
+        "strict.json"
+      ],
+      "url": "http://json.schemastore.org/eslintrc"
+    }
+  ]
+}
