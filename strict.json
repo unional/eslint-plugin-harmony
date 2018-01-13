@@ -1,0 +1,7 @@
+{
+  "extends": "./basic.json",
+  "rules": {
+    "comma-dangle": ["error"],
+    "semi": ["error"]
+  }
+}
