@@ -12,6 +12,15 @@
       2,
       "nofunc"
     ],
-    "quotes": ["error", "single"]
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ]
   }
 }
