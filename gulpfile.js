@@ -65,7 +65,6 @@ function buildTasks(styles) {
   })
   return entries
 }
-
-gulp.task('eslint', buildTasks(['es5', 'strict']));
+gulp.task('eslint', buildTasks(['default', 'strict']));
 
 gulp.task('default', ['eslint']);

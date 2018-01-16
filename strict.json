@@ -1,5 +1,8 @@
 {
-  "extends": "./es5.json",
+  "extends": [
+    "eslint:recommended",
+    "./style-parts/es5.json"
+  ],
   "rules": {
     "comma-dangle": ["error"],
     "semi": ["error"]
