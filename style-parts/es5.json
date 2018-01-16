@@ -1,5 +1,4 @@
 {
-  "extends": "eslint:recommended",
   "rules": {
     "brace-style": [
       2,
