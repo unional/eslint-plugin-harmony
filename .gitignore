@@ -38,6 +38,7 @@ node_modules
 .idea/*
 !.idea/codeStyles
 !.idea/inspectionProfiles
+!.idea/jsLibraryMappings.xml
 
 # typings
 typings
