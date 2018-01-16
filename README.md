@@ -35,17 +35,8 @@ npm install eslint-config-unional
 ```js
 // .eslint.json
 {
-  "extends": "unional" // or other styles
+  "extends": "unional" // or other styles, e.g. "unional/strict"
 }
-```
-
-## Npm Commands
-
-There are a few useful commands you can use during development.
-
-```sh
-# Run tests to validate the rules are checked correctly.
-npm test
 ```
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-unional.svg?style=flat
