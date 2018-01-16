@@ -39,6 +39,18 @@ npm install eslint-config-unional
 }
 ```
 
+## Note for JetBrains IDE
+
+When cloning this project, and opening it on JetBrains IDE,
+you will see some errors such as `process` is not defined.
+You need to turn on NodeJS support on the IDE.
+Those lines are added just to keep JetBrains happy,
+(from `no-unused-vars` and `no-console`).
+
+When using the config in your own project,
+you can get the codeStyles and inspectionProfiles.
+That should be sufficient.
+
 [npm-image]: https://img.shields.io/npm/v/eslint-config-unional.svg?style=flat
 [npm-url]: https://npmjs.org/package/eslint-config-unional
 [downloads-image]: https://img.shields.io/npm/dm/eslint-config-unional.svg?style=flat
