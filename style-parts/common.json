@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "brace-style": [
+      2,
+      "stroustrup",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-use-before-define": [
+      2,
+      "nofunc"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ]
+  }
+}
