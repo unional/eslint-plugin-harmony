@@ -3,7 +3,8 @@
     {
       "fileMatch": [
         "basic.json",
-        "strict.json"
+        "strict.json",
+        "style-parts/*.json"
       ],
       "url": "http://json.schemastore.org/eslintrc"
     }
