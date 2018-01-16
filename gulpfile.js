@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
-// const tslint = require('tslint');
 const gutil = require('gulp-util');
 const uniq = require('lodash.uniq')
 const path = require('path')
@@ -27,10 +26,15 @@ function negativeTest(config) {
       return through(function (file) {
         const result = file.eslint
         const filename = path.basename(result.filePath)
-        const ruleId = filename.slice(0, -8)
-        const rule = result.messages.find(m => m.ruleId === ruleId)
-        if (!rule) {
+        const matches = /(.*)\.(\d*)\.fail\.js/.exec(filename)
+        const ruleId = matches[1]
+        const failCount = matches[2]
+        const rules = result.messages.filter(m => m.ruleId === ruleId)
+        if (!rules.length === 0) {
           errMsg = `[${gutil.colors.cyan(config)}] ${gutil.colors.red(`${filename} did not trigger '${ruleId}'`)}`
+        }
+        else if (rules.length != failCount) {
+            errMsg = `[${gutil.colors.cyan(config)}] ${gutil.colors.red(`${filename} expected ${failCount} violation of '${ruleId}' but received ${rules.length}`)}`
         }
         else {
           const unexpectedRules = uniq(result.messages.filter(m => m.ruleId !== ruleId).map(m => `'${m.ruleId}'`))
@@ -40,34 +44,28 @@ function negativeTest(config) {
       }, function () {
         if (errMsg) {
           this.emit('error', new PluginError('gulp-eslint', errMsg));
-        } else {
+        }
+        else {
           this.emit('end');
         }
       });
     })());
 }
 
-gulp.task('eslint-basic-positive', function () {
-  return positiveTest('basic');
-});
+function buildTasks(styles) {
+  const entries = []
+  styles.forEach(s => {
+    const p = `eslint-${s}-positive`
+    entries.push(p)
+    gulp.task(p, () => positiveTest(s))
 
-gulp.task('eslint-basic-negative', function () {
-  return negativeTest('basic');
-});
+    const n = `eslint-${s}-negative`
+    entries.push(n)
+    gulp.task(n, () => negativeTest(s))
+  })
+  return entries
+}
 
-gulp.task('eslint-strict-positive', function () {
-  return positiveTest('strict');
-});
-
-gulp.task('eslint-strict-negative', function () {
-  return negativeTest('strict');
-});
-
-gulp.task('eslint', [
-  'eslint-basic-positive',
-  'eslint-basic-negative',
-  'eslint-strict-positive',
-  'eslint-strict-negative'
-]);
+gulp.task('eslint', buildTasks(['es5', 'strict']));
 
 gulp.task('default', ['eslint']);
