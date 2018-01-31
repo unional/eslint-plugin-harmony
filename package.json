@@ -6,6 +6,7 @@
   "files": [
     "default.json",
     "strict.json",
+    "latest.json",
     "style-parts"
   ],
   "scripts": {
