@@ -7,6 +7,7 @@
         "allowSingleLine": true
       }
     ],
+    "comma-dangle": ["error", "only-multiline"],
     "no-use-before-define": [
       2,
       "nofunc"

@@ -17,7 +17,7 @@ function positiveTest(config) {
 }
 
 function negativeTest(config) {
-  return gulp.src(`spec/${config}/*.fail.js`)
+  return gulp.src(`spec/${config}/*.error.js`)
     .pipe(eslint({
       configFile: `${config}.json`
     }))
@@ -26,15 +26,15 @@ function negativeTest(config) {
       return through(function (file) {
         const result = file.eslint
         const filename = path.basename(result.filePath)
-        const matches = /(.*)\.(\d*)\.fail\.js/.exec(filename)
+        const matches = /(.*)\.(\d*)\.error\.js/.exec(filename)
         const ruleId = matches[1]
-        const failCount = matches[2]
+        const errorCount = matches[2]
         const rules = result.messages.filter(m => m.ruleId === ruleId)
-        if (!rules.length === 0) {
+        if (rules.length === 0) {
           errMsg = `[${gutil.colors.cyan(config)}] ${gutil.colors.red(`${filename} did not trigger '${ruleId}'`)}`
         }
-        else if (rules.length != failCount) {
-            errMsg = `[${gutil.colors.cyan(config)}] ${gutil.colors.red(`${filename} expected ${failCount} violation of '${ruleId}' but received ${rules.length}`)}`
+        else if (rules.length != errorCount) {
+            errMsg = `[${gutil.colors.cyan(config)}] ${gutil.colors.red(`${filename} expected ${errorCount} violation of '${ruleId}' but received ${rules.length}`)}`
         }
         else {
           const unexpectedRules = uniq(result.messages.filter(m => m.ruleId !== ruleId).map(m => `'${m.ruleId}'`))
