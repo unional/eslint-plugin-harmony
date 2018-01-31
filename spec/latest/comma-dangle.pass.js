@@ -1,5 +1,5 @@
-var foo = {
+const foo = {
   a: 1,
-};
+}
 
-process.env = foo;
+process.env = foo

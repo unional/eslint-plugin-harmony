@@ -1,5 +1,11 @@
 {
   "extends": "./common.json",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
     "no-unused-vars": [
       "error",
