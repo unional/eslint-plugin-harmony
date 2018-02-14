@@ -1,4 +1,4 @@
-# eslint-config-unional
+# eslint-plugin-unional
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
@@ -33,23 +33,23 @@ You'll first need to install [ESLint](http://eslint.org):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-config-unional`:
+Next, install `eslint-plugin-unional`:
 
 ```sh
-npm install eslint-config-unional --save-dev
+npm install eslint-plugin-unional --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-config-unional` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-unional` globally.
 
 ## Usage
 
-Add `eslint-config-unional` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `eslint-plugin-unional` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-  "extends": "unional:default", // or other styles, e.g. "unional:strict"
+  "extends": "plugin:unional/latest", // or other styles, e.g. "plugin:unional/default"
   "plugins": [
-    "eslint-config-unional"
+    "unional"
   ]
 }
 ```
@@ -66,14 +66,14 @@ When using the config in your own project,
 you can get the codeStyles and inspectionProfiles.
 That should be sufficient.
 
-[npm-image]: https://img.shields.io/npm/v/eslint-config-unional.svg?style=flat
-[npm-url]: https://npmjs.org/package/eslint-config-unional
-[downloads-image]: https://img.shields.io/npm/dm/eslint-config-unional.svg?style=flat
-[downloads-url]: https://npmjs.org/package/eslint-config-unional
-[travis-image]: https://img.shields.io/travis/unional/eslint-config-unional/master.svg?style=flat
-[travis-url]: https://travis-ci.org/unional/eslint-config-unional?branch=master
+[npm-image]: https://img.shields.io/npm/v/eslint-plugin-unional.svg?style=flat
+[npm-url]: https://npmjs.org/package/eslint-plugin-unional
+[downloads-image]: https://img.shields.io/npm/dm/eslint-plugin-unional.svg?style=flat
+[downloads-url]: https://npmjs.org/package/eslint-plugin-unional
+[travis-image]: https://img.shields.io/travis/unional/eslint-plugin-unional/master.svg?style=flat
+[travis-url]: https://travis-ci.org/unional/eslint-plugin-unional?branch=master
 [green-keeper-image]:
-https://badges.greenkeeper.io/unional/eslint-config-unional.svg
+https://badges.greenkeeper.io/unional/eslint-plugin-unional.svg
 [green-keeper-url]:https://greenkeeper.io/
 [semantic-release-image]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]:https://github.com/semantic-release/semantic-release

@@ -6,9 +6,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "tag": "next"
-  },
   "scripts": {
     "test": "gulp",
     "travis-deploy-once": "travis-deploy-once",
@@ -16,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/unional/eslint-config-unional"
+    "url": "https://github.com/unional/eslint-plugin-unional"
   },
   "keywords": [
     "eslint",
@@ -28,12 +25,12 @@
   "author": "Unional",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unional/eslint-config-unional/issues"
+    "url": "https://github.com/unional/eslint-plugin-unional/issues"
   },
   "engines": {
     "node": ">=0.10.0"
   },
-  "homepage": "https://github.com/unional/eslint-config-unional",
+  "homepage": "https://github.com/unional/eslint-plugin-unional",
   "peerDependencies": {
     "eslint": ">=4.15.0"
   },
@@ -44,7 +41,6 @@
     "gulp-util": "^3.0.8",
     "lodash.uniq": "^4.5.0",
     "semantic-release": "^12.2.1",
-    "through": "^2.3.8",
-    "travis-deploy-once": "^4.3.1"
+    "through": "^2.3.8"
   }
 }
