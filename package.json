@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-unional",
+  "name": "eslint-plugin-unional",
   "version": "0.0.0-development",
   "description": "eslint config that works in harmony with different IDEs",
   "main": "lib/index.js",
