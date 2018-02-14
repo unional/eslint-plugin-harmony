@@ -10,7 +10,7 @@ const PluginError = gutil.PluginError;
 function positiveTest(config) {
   return gulp.src(`spec/${config}/*.pass.js`)
     .pipe(eslint({
-      configFile: `${config}.json`
+      configFile: `lib/${config}.json`
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -19,7 +19,7 @@ function positiveTest(config) {
 function negativeTest(config) {
   return gulp.src(`spec/${config}/*.error.js`)
     .pipe(eslint({
-      configFile: `${config}.json`
+      configFile: `lib/${config}.json`
     }))
     .pipe((function () {
       let errMsg
