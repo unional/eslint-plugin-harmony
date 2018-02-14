@@ -47,10 +47,7 @@ Add `eslint-plugin-unional` to the plugins section of your `.eslintrc` configura
 
 ```json
 {
-  "extends": "plugin:unional/latest", // or other styles, e.g. "plugin:unional/default"
-  "plugins": [
-    "unional"
-  ]
+  "extends": "plugin:unional/latest" // or other styles, e.g. "plugin:unional/default"
 }
 ```
 
