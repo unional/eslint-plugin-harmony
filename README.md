@@ -25,17 +25,32 @@ here are the principles that they all follows:
   - i.e., unfortunately, no [tab]
 - Thrive for easy to write (with fewest keystrokes) while keeping the code clean
 
-## Usage
+## Installation
+
+You'll first need to install [ESLint](http://eslint.org):
 
 ```sh
-# Install
-npm install eslint-config-unional
+npm i eslint --save-dev
 ```
 
-```js
-// .eslint.json
+Next, install `eslint-config-unional`:
+
+```sh
+npm install eslint-config-unional --save-dev
+```
+
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-config-unional` globally.
+
+## Usage
+
+Add `eslint-config-unional` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+
+```json
 {
-  "extends": "unional" // or other styles, e.g. "unional/strict"
+  "extends": "unional:default", // or other styles, e.g. "unional:strict"
+  "plugins": [
+    "eslint-config-unional"
+  ]
 }
 ```
 

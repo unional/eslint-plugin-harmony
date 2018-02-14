@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-unional",
   "version": "0.0.0-development",
-  "description": "eslint config",
-  "main": "default.json",
+  "description": "eslint config that works in harmony with different IDEs",
+  "main": "lib/index.js",
   "files": [
-    "default.json",
-    "strict.json",
-    "latest.json",
-    "style-parts"
+    "lib"
   ],
+  "publishConfig": {
+    "tag": "next"
+  },
   "scripts": {
     "test": "gulp",
     "travis-deploy-once": "travis-deploy-once",
@@ -20,8 +20,8 @@
   },
   "keywords": [
     "eslint",
-    "eslintconfig",
-    "config",
+    "eslintplugin",
+    "eslint-plugin",
     "javascript",
     "styleguide"
   ],
@@ -29,6 +29,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/unional/eslint-config-unional/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
   },
   "homepage": "https://github.com/unional/eslint-config-unional",
   "peerDependencies": {
