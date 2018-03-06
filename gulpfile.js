@@ -27,6 +27,8 @@ function negativeTest(config) {
         const result = file.eslint
         const filename = path.basename(result.filePath)
         const matches = /(.*)\.(\d*)\.error\.js/.exec(filename)
+        if (!matches)
+          throw new Error(`Unable to process '${filename}'. Missing number of errors expected?`)
         const ruleId = matches[1]
         const errorCount = matches[2]
         const rules = result.messages.filter(m => m.ruleId === ruleId)
@@ -55,16 +57,15 @@ function negativeTest(config) {
 function buildTasks(styles) {
   const entries = []
   styles.forEach(s => {
-    const p = `eslint-${s}-positive`
+    const p = `${s}-pass`
     entries.push(p)
     gulp.task(p, () => positiveTest(s))
 
-    const n = `eslint-${s}-negative`
+    const n = `${s}-error`
     entries.push(n)
     gulp.task(n, () => negativeTest(s))
   })
   return entries
 }
-gulp.task('eslint', buildTasks(['default', 'strict', 'latest']));
 
-gulp.task('default', ['eslint']);
+gulp.task('default', buildTasks(['default', 'strict', 'latest']));
