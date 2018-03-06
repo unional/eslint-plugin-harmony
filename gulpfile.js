@@ -1,9 +1,10 @@
-const gulp = require('gulp');
-const eslint = require('gulp-eslint');
-const gutil = require('gulp-util');
+const fs = require('fs')
+const gulp = require('gulp')
+const eslint = require('gulp-eslint')
+const gutil = require('gulp-util')
 const uniq = require('lodash.uniq')
 const path = require('path')
-const through = require('through');
+const through = require('through')
 
 const PluginError = gutil.PluginError;
 
@@ -68,4 +69,6 @@ function buildTasks(styles) {
   return entries
 }
 
-gulp.task('default', buildTasks(['default', 'strict', 'latest']));
+const styles = fs.readdirSync('lib').filter(x => x.endsWith('.json')).map(x => x.slice(0, -5))
+
+gulp.task('default', buildTasks(styles))
