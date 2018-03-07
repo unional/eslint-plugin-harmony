@@ -4,7 +4,8 @@
   "description": "eslint config that works in harmony with different IDEs",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "ide-configs"
   ],
   "scripts": {
     "test": "gulp",
