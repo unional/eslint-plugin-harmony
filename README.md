@@ -8,6 +8,8 @@
 [![semantic-release][semantic-release-image]][semantic-release-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
+[![phpStorm][phpStorm-image]][phpStorm-url]
+[![Atom][atom-image]][atom-url]
 
 A [`eslint`](https://eslint.org/) config styles package that work across IDEs.
 
@@ -89,3 +91,7 @@ https://badges.greenkeeper.io/unional/eslint-plugin-harmony.svg
 [semantic-release-url]:https://github.com/semantic-release/semantic-release
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]:https://code.visualstudio.com/
+[phpStorm-image]:https://img.shields.io/badge/phpStorm-ready-green.svg
+[phpStorm-url]:https://code.visualstudio.com/
+[atom-image]:https://img.shields.io/badge/atom-ready-green.svg
+[atom-url]:https://code.visualstudio.com/
