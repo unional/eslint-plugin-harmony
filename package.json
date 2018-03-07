@@ -6,6 +6,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "tag": "next"
+  },
   "scripts": {
     "test": "gulp",
     "travis-deploy-once": "travis-deploy-once",
