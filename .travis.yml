@@ -12,6 +12,7 @@ node_js:
 branches:
   only:
     - master
+    - next
     - /^greenkeeper.*$/
 before_install:
   - npm install -g greenkeeper-lockfile@1
