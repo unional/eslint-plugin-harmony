@@ -26,3 +26,7 @@ deploy:
   script:
     - npm install -g travis-deploy-once@4
     - travis-deploy-once "npm run semantic-release"
+  on:
+    branch:
+      - master
+      - next
