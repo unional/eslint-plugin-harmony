@@ -20,6 +20,6 @@ before_script: greenkeeper-lockfile-update
 script:
   - npm test
 after_script: greenkeeper-lockfile-upload
-after_success:
+deploy:
   - npm install -g travis-deploy-once@4
   - travis-deploy-once "npm run semantic-release"
