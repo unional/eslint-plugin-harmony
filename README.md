@@ -61,13 +61,7 @@ To use the eslint style, extends from it:
 For specific IDE support, import the files needed under `ide-configs/<style>/<ide>`.
 If no config in that folder, it means the IDE default formatting works with that particular style.
 
-## Note for JetBrains IDE
-
-When cloning this project, and opening it on JetBrains IDE,
-you will see some errors such as `process` is not defined.
-You need to turn on NodeJS support on the IDE.
-Those lines are added just to keep JetBrains happy,
-(from `no-unused-vars` and `no-console`).
+### JetBrains IDE
 
 After you import the settings,
 you need to use them in the setting:
