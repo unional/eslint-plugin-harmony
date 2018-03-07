@@ -26,9 +26,9 @@ here are the principles that they all follows:
 
 ## Supported IDE
 
-Visual Studio Code (1.20.0): <https://code.visualstudio.com/>
-phpStorm (2017.3.4): <https://www.jetbrains.com/phpstorm/>
-Atom (1.24.0): <https://atom.io/>
+- Visual Studio Code (1.20.0): <https://code.visualstudio.com/>
+- phpStorm (2017.3.4): <https://www.jetbrains.com/phpstorm/>
+- Atom (1.24.0): <https://atom.io/>
 
 ## Installation
 
