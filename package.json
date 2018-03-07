@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-harmony",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "description": "eslint config that works in harmony with different IDEs",
   "main": "lib/index.js",
   "files": [
