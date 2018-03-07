@@ -24,6 +24,12 @@ here are the principles that they all follows:
   - so that when you stop by your team member's cube, the code looks the same.
 - Thrive for easy to write (with fewest keystrokes) while keeping the code clean
 
+## Supported IDE
+
+Visual Studio Code (1.20.0): <https://code.visualstudio.com/>
+phpStorm (2017.3.4): <https://www.jetbrains.com/phpstorm/>
+Atom (1.24.0): <https://atom.io/>
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -42,13 +48,16 @@ npm install eslint-plugin-harmony --save-dev
 
 ## Usage
 
-Add `eslint-plugin-harmony` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+To use the eslint style, extends from it:
 
-```json
+```js
 {
-  "extends": "plugin:unional/latest" // or other styles, e.g. "plugin:unional/default"
+  "extends": "plugin:harmony/latest" // or other styles, e.g. "plugin:harmony/es5-strict"
 }
 ```
+
+For specific IDE support, import the files needed under `ide-configs/<style>/<ide>`.
+If no config in that folder, it means the IDE default formatting works with that particular style.
 
 ## Note for JetBrains IDE
 
@@ -58,9 +67,14 @@ You need to turn on NodeJS support on the IDE.
 Those lines are added just to keep JetBrains happy,
 (from `no-unused-vars` and `no-console`).
 
-When using the config in your own project,
-you can get the codeStyles and inspectionProfiles.
-That should be sufficient.
+After you import the settings,
+you need to use them in the setting:
+
+![setting](2018-03-06-16-12-17.png)
+
+You also need to change your language version approprately:
+
+![language version](2018-03-06-16-14-48.png)
 
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-harmony.svg?style=flat
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony
