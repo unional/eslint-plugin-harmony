@@ -41,7 +41,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-util": "^3.0.8",
     "lodash.uniq": "^4.5.0",
-    "semantic-release": "^12.4.1",
+    "semantic-release": "^15.0.0",
     "through": "^2.3.8"
   }
 }
