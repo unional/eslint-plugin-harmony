@@ -86,6 +86,6 @@ https://badges.greenkeeper.io/unional/eslint-plugin-harmony.svg
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]:https://code.visualstudio.com/
 [phpStorm-image]:https://img.shields.io/badge/phpStorm-ready-green.svg
-[phpStorm-url]:https://code.visualstudio.com/
+[phpStorm-url]:https://www.jetbrains.com/phpstorm/
 [atom-image]:https://img.shields.io/badge/atom-ready-green.svg
-[atom-url]:https://code.visualstudio.com/
+[atom-url]:https://atom.io/
