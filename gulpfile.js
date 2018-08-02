@@ -71,4 +71,4 @@ function buildTasks(styles) {
 
 const styles = fs.readdirSync('lib').filter(x => x.endsWith('.json')).map(x => x.slice(0, -5))
 
-gulp.task('default', buildTasks(styles))
+gulp.task('default', gulp.parallel(buildTasks(styles)))

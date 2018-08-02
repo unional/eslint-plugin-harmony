@@ -33,15 +33,15 @@
   },
   "homepage": "https://github.com/unional/eslint-plugin-harmony",
   "peerDependencies": {
-    "eslint": ">=4.15.0"
+    "eslint": ">=5.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.0.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.2",
+    "eslint": "^5.2.0",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
     "gulp-util": "^3.0.8",
     "lodash.uniq": "^4.5.0",
-    "semantic-release": "^15.1.2",
+    "semantic-release": "^15.9.3",
     "through": "^2.3.8"
   }
 }
