@@ -17,5 +17,3 @@ branches:
     - /^greenkeeper.*$/
 script:
   - yarn test
-after_success:
-  - npx semantic-release
