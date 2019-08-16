@@ -50,16 +50,28 @@ npm install eslint-plugin-harmony --save-dev
 
 ## Usage
 
-To use the eslint style, extends from it:
+To use the eslint style, extends from one of the following:
 
 ```js
 {
-  "extends": "plugin:harmony/latest" // or other styles, e.g. "plugin:harmony/es5-strict"
+  "extends": "plugin:harmony/latest",
+  "extends": "plugin:harmony/es5",
+  "extends": "plugin:harmony/es5-strict",
+  "extends": "plugin:harmony/ts/recommended",
+  "extends": "plugin:harmony/ts/recommended-requiring-type-checking",
 }
 ```
 
-For specific IDE support, import the files needed under `ide-configs/<style>/<ide>`.
-If no config in that folder, it means the IDE default formatting works with that particular style.
+### TypeScript
+
+The TypeScript style is extended from [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
+
+They are adjusted to the style in harmony.
+Also, the configuration are simplified.
+
+Note that for `recommended-requiring-type-checking` you still need to specify `parserOptions.project`.
+
+For more information, please check out [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
 ### JetBrains IDE
 

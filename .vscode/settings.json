@@ -2,9 +2,7 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "basic.json",
-        "strict.json",
-        "style-parts/*.json"
+        "lib/**/*.json"
       ],
       "url": "http://json.schemastore.org/eslintrc"
     }
