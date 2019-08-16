@@ -1,0 +1,6 @@
+{
+  "extends": "../../lib/ts-prettier",
+  "env": {
+    "node": true
+  }
+}

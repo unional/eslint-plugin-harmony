@@ -1,4 +1,3 @@
-const fs = require('fs')
 const gulp = require('gulp')
 const eslint = require('gulp-eslint')
 const colors = require('ansi-colors')
@@ -9,10 +8,9 @@ const through = require('through')
 const PluginError = require('plugin-error')
 
 function positiveTest(config) {
+  const configFile = require.resolve(`./lib/${config}`)
   return gulp.src(`spec/${config}/*.pass.*`)
-    .pipe(eslint({
-      configFile: `lib/${config}.json`
-    }))
+    .pipe(eslint({ configFile }))
     .pipe(eslint.format())
     .pipe(eslint.results(results => {
       const count = results.errorCount;
@@ -27,12 +25,10 @@ function positiveTest(config) {
 }
 
 function negativeTest(config) {
+  const configFile = require.resolve(`./lib/${config}`)
   return gulp.src(`spec/${config}/*.error.*`)
-    .pipe(eslint({
-      configFile: `lib/${config}.json`
-    }))
+    .pipe(eslint({ configFile }))
     .pipe((function () {
-
       let errMsg
       return through(function (file) {
         const result = file.eslint
@@ -79,8 +75,6 @@ function buildTasks(styles) {
   return entries
 }
 
-const styles = fs.readdirSync('lib')
-  .filter(x => x.endsWith('.json'))
-  .map(x => x.slice(0, -5))
+const styles = Object.keys(require('./lib').configs)
 
 gulp.task('default', gulp.parallel(buildTasks(styles)))

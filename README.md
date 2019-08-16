@@ -37,13 +37,13 @@ here are the principles that they all follows:
 You'll first need to install [ESLint](http://eslint.org):
 
 ```sh
-npm i eslint --save-dev
+npm install --save-dev eslint
 ```
 
 Next, install `eslint-plugin-harmony`:
 
 ```sh
-npm install eslint-plugin-harmony --save-dev
+npm install --save-dev eslint-plugin-harmony
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-harmony` globally.
@@ -57,6 +57,7 @@ To use the eslint style, extends from one of the following:
   "extends": "plugin:harmony/latest",
   "extends": "plugin:harmony/es5",
   "extends": "plugin:harmony/es5-strict",
+  "extends": "plugin:harmony/ts-prettier", // experimental
   "extends": "plugin:harmony/ts-recommended", // or use overrides
   "extends": "plugin:harmony/ts-recommended-requiring-type-checking", // or use overrides
 }
@@ -64,7 +65,19 @@ To use the eslint style, extends from one of the following:
 
 ### TypeScript
 
-The TypeScript style is extended from [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
+To use the TypeScript styles, you need to also install
+[`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) and
+[`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).:
+
+```sh
+npm install --save-dev eslint-plugin-harmony @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+If you also use `prettier`, you will also need [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier).
+
+These are not installed by default so that you won't have extra dependencies installed if you only write JavaScript.
+
+The TypeScript style is extended from [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
 They are adjusted to the style in harmony.
 Also, the configuration are simplified.
