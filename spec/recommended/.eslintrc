@@ -1,6 +1,0 @@
-{
-  "extends": "../../lib/recommended",
-  "env": {
-    "node": true
-  }
- }

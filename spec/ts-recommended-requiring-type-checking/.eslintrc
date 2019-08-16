@@ -1,5 +1,5 @@
 {
-  "extends": "../../lib/recommended-requiring-type-checking.json",
+  "extends": "../../lib/ts-recommended-requiring-type-checking.json",
   "parserOptions": {
     "project": "../../tsconfig.json"
   },

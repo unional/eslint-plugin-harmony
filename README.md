@@ -57,8 +57,8 @@ To use the eslint style, extends from one of the following:
   "extends": "plugin:harmony/latest",
   "extends": "plugin:harmony/es5",
   "extends": "plugin:harmony/es5-strict",
-  "extends": "plugin:harmony/ts-recommended",
-  "extends": "plugin:harmony/ts-recommended-requiring-type-checking",
+  "extends": "plugin:harmony/ts-recommended", // or use overrides
+  "extends": "plugin:harmony/ts-recommended-requiring-type-checking", // or use overrides
 }
 ```
 
@@ -68,6 +68,28 @@ The TypeScript style is extended from [@typescript-eslint/eslint-plugin](https:/
 
 They are adjusted to the style in harmony.
 Also, the configuration are simplified.
+
+Since you will likely to have some JavaScript files in your TypeScript project (e.g. `jest.config.js`, `webpack.config.js`, etc),
+it is recommended to use the `overrides.extends` feature in `eslint` to support mixed environment:
+
+```js
+{
+  "extends": [
+    "plugin:harmony/latest.json"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:harmony/ts-recommended"
+      ]
+    }
+  ]
+}
+```
 
 Note that for `ts-recommended-requiring-type-checking` you still need to specify `parserOptions.project`.
 

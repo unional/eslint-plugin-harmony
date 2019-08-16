@@ -1,0 +1,6 @@
+{
+  "extends": "../../lib/ts-recommended",
+  "env": {
+    "node": true
+  }
+ }
