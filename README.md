@@ -57,8 +57,8 @@ To use the eslint style, extends from one of the following:
   "extends": "plugin:harmony/latest",
   "extends": "plugin:harmony/es5",
   "extends": "plugin:harmony/es5-strict",
-  "extends": "plugin:harmony/ts/recommended",
-  "extends": "plugin:harmony/ts/recommended-requiring-type-checking",
+  "extends": "plugin:harmony/ts-recommended",
+  "extends": "plugin:harmony/ts-recommended-requiring-type-checking",
 }
 ```
 
@@ -69,7 +69,7 @@ The TypeScript style is extended from [@typescript-eslint/eslint-plugin](https:/
 They are adjusted to the style in harmony.
 Also, the configuration are simplified.
 
-Note that for `recommended-requiring-type-checking` you still need to specify `parserOptions.project`.
+Note that for `ts-recommended-requiring-type-checking` you still need to specify `parserOptions.project`.
 
 For more information, please check out [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
