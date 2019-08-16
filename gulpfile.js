@@ -82,8 +82,5 @@ function buildTasks(styles) {
 const styles = fs.readdirSync('lib')
   .filter(x => x.endsWith('.json'))
   .map(x => x.slice(0, -5))
-const tsStyles = fs.readdirSync('lib/ts')
-  .filter(x => x.endsWith('.json'))
-  .map(x => `ts/${x.slice(0, -5)}`)
 
-gulp.task('default', gulp.parallel(buildTasks(styles.concat(tsStyles))))
+gulp.task('default', gulp.parallel(buildTasks(styles)))
