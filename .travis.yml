@@ -6,20 +6,16 @@ cache:
 notifications:
   email: false
 node_js:
-  - '9'
+  - '12'
+  - '11'
+  - '10'
   - '8'
-  - '6'
 branches:
   only:
     - master
     - next
     - /^greenkeeper.*$/
-before_install:
-  - npm install -g greenkeeper-lockfile@1
-before_script: greenkeeper-lockfile-update
 script:
-  - npm test
-after_script: greenkeeper-lockfile-upload
+  - yarn test
 after_success:
-  - npm install -g travis-deploy-once@4
-  - travis-deploy-once "npm run semantic-release"
+  - npx semantic-release
