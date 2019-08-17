@@ -24,7 +24,7 @@ function positiveTest(config) {
     }))
 }
 
-function negativeTest(config) {
+function errorTest(config) {
   const configFile = require.resolve(`./lib/${config}`)
   return gulp.src(`spec/${config}/*.error.*`)
     .pipe(eslint({ configFile }))
@@ -61,6 +61,43 @@ function negativeTest(config) {
     })());
 }
 
+function warnTest(config) {
+  const configFile = require.resolve(`./lib/${config}`)
+  return gulp.src(`spec/${config}/*.warn.*`)
+    .pipe(eslint({ configFile }))
+    .pipe((function () {
+      let errMsg
+      return through(function (file) {
+        const result = file.eslint
+        const filename = path.basename(result.filePath)
+        const matches = /(.*)\.(\d*)\.warn\.(j|t)s/.exec(filename)
+        if (!matches)
+          throw new Error(`Unable to process '${filename}'. Missing number of warnings expected?`)
+        const ruleId = matches[1]
+        const errorCount = matches[2]
+        const rules = result.messages.filter(m => m.ruleId.endsWith(ruleId))
+        if (rules.length === 0) {
+          errMsg = `[${colors.cyan(config)}] ${colors.red(`${filename} did not trigger '${ruleId}'`)}`
+        }
+        else if (rules.length != errorCount) {
+          errMsg = `[${colors.cyan(config)}] ${colors.red(`${filename} expected ${errorCount} violation of '${ruleId}' but received ${rules.length}`)}`
+        }
+        else {
+          const unexpectedRules = uniq(result.messages.filter(m => m.ruleId !== ruleId).map(m => `'${m.ruleId}'`))
+          if (unexpectedRules.length > 1)
+            errMsg = `[${colors.cyan(config)}] ${colors.red(`${filename} triggered unexpected rule(s): ${unexpectedRules.join(', ')}`)}`
+        }
+      }, function () {
+        if (errMsg) {
+          this.emit('error', new PluginError(config, errMsg, { showProperties: false }));
+        }
+        else {
+          this.emit('end');
+        }
+      });
+    })());
+}
+
 function buildTasks(styles) {
   const entries = []
   styles.forEach(s => {
@@ -68,9 +105,13 @@ function buildTasks(styles) {
     entries.push(p)
     gulp.task(p, () => positiveTest(s))
 
-    const n = `${s}-error`
-    entries.push(n)
-    gulp.task(n, () => negativeTest(s))
+    const e = `${s}-error`
+    entries.push(e)
+    gulp.task(e, () => errorTest(s))
+
+    const w = `${s}-warn`
+    entries.push(w)
+    gulp.task(w, () => warnTest(s))
   })
   return entries
 }
