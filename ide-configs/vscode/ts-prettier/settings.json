@@ -1,13 +1,4 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "lib/**/*.json"
-      ],
-      "url": "http://json.schemastore.org/eslintrc"
-    }
-  ],
-  "eslint.enable": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
