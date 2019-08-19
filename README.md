@@ -73,7 +73,7 @@ To use the TypeScript styles, you need to also install
 npm install --save-dev eslint-plugin-harmony @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-If you also use `prettier`, you will also need [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier).
+If you want to use the `ts-prettier` style, you will also need [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier).
 
 These are not installed by default so that you won't have extra dependencies installed if you only write JavaScript.
 
