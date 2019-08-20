@@ -1,3 +1,1 @@
 lib
-spec/**/*.error.*
-spec/**/*.warn.*

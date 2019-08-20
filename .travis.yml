@@ -16,4 +16,5 @@ branches:
     - next
     - /^greenkeeper.*$/
 script:
+  - yarn build
   - yarn test
