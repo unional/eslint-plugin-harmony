@@ -17,4 +17,6 @@ branches:
     - /^greenkeeper.*$/
 script:
   - yarn build
+  - yarn link
+  - yarn link eslint-plugin-harmony
   - yarn test
