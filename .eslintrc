@@ -1,9 +1,10 @@
 {
- "extends": "./lib/latest.json",
- "parserOptions": {
-   "ecmaVersion": 2017
- },
+ "extends": "plugin:harmony/latest",
  "env": {
    "node": true
- }
+ },
+ "overrides": [{
+   "extends": "plugin:harmony/ts-recommended",
+   "files": ["*.ts", "*.tsx"]
+ }]
 }

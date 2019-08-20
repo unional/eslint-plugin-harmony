@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "./style-parts/es5.json"
+  ]
+}

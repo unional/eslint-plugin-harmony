@@ -1,6 +1,6 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "./style-parts/es2017.json"
-  ]
+    "extends": [
+        "eslint:recommended",
+        "./style-parts/es2017.json"
+    ]
 }

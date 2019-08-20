@@ -1,11 +1,11 @@
 {
-  "extends": "./common.json",
-  "rules": {
-    "no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ]
-  }
+    "extends": "./common.json",
+    "rules": {
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    }
 }

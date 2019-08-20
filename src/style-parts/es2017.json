@@ -1,0 +1,26 @@
+{
+  "extends": "./common.json",
+  "parserOptions": {
+    "ecmaVersion": 9
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ]
+  }
+}
