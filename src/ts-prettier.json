@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "./latest",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "./style-parts/ts-common",
+    "./style-parts/ts-prettier"
+  ]
+}

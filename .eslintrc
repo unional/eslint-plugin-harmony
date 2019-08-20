@@ -1,9 +1,10 @@
 {
- "extends": "./lib/latest.json",
- "parserOptions": {
-   "ecmaVersion": 2017
- },
+ "extends": "./lib/latest",
  "env": {
    "node": true
- }
+ },
+ "overrides": [{
+   "extends": "./lib/ts-recommended",
+   "files": ["*.ts", "*.tsx"]
+ }]
 }

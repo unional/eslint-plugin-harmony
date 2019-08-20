@@ -119,6 +119,14 @@ You also need to change your language version approprately:
 
 ![language version](2018-03-06-16-14-48.png)
 
+
+## Contribute
+
+```sh
+yarn
+yarn bootstrap
+```
+
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-harmony.svg?style=flat
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony
 [downloads-image]: https://img.shields.io/npm/dm/eslint-plugin-harmony.svg?style=flat

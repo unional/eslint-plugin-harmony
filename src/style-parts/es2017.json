@@ -6,7 +6,7 @@
   "rules": {
     "comma-dangle": [
       "error",
-      "always-multiline"
+      "only-multiline"
     ],
     "no-unused-vars": [
       "error",
