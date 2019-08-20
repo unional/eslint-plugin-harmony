@@ -3,8 +3,6 @@ import { createRule } from '../../utils/createRule';
 
 type Delimiter = 'comma' | 'none' | 'semi'
 
-// need type's implicit index sig for deepMerge
-// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 type TypeOptions = {
   delimiter?: Delimiter,
   requireLast?: boolean

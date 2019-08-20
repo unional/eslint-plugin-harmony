@@ -1,10 +1,10 @@
 {
- "extends": "plugin:harmony/latest",
+ "extends": "./lib/latest",
  "env": {
    "node": true
  },
  "overrides": [{
-   "extends": "plugin:harmony/ts-recommended",
+   "extends": "./lib/ts-recommended",
    "files": ["*.ts", "*.tsx"]
  }]
 }
