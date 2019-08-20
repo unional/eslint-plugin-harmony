@@ -1,4 +1,4 @@
-# Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
+# Require a specific member delimiter style for interfaces and type literals (ts-member-delimiter-style)
 
 Enforces a consistent member delimiter style in interfaces and type literals. There are three member delimiter styles primarily used in TypeScript:
 
@@ -80,8 +80,7 @@ Default config:
 ```JSON
 {
     "multiline": {
-        "delimiter": "semi",
-        "requireLast": true
+        "delimiter": "semi"
     },
     "singleline": {
         "delimiter": "semi",
@@ -109,6 +108,7 @@ Determines whether or not the last member in the `interface`/`type` should have 
 
 - `true` - the last member **_must_** have a delimiter.
 - `false` - the last member **_must not_** have a delimiter.
+- not specified - will not check for the last member
 
 ### `overrides`
 
@@ -155,11 +155,6 @@ interface Bar {
     greet(): string,
 }
 
-// missing last member delimiter
-interface Baz {
-    name: string;
-    greet(): string
-}
 
 // incorrect delimiter
 type FooBar = { name: string, greet(): string }
@@ -182,6 +177,11 @@ interface Foo { name: string }
 type Bar = {
     name: string;
     greet(): string;
+}
+
+interface Baz {
+    name: string;
+    greet(): string
 }
 
 type Bar = { name: string }

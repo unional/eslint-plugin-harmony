@@ -1,5 +1,5 @@
 import { TSESTree, AST_NODE_TYPES, ESLintUtils } from '@typescript-eslint/experimental-utils';
-import { createRule } from '../../utils/createRule';
+import { createRule } from '../utils/createRule';
 
 type Delimiter = 'comma' | 'none' | 'semi'
 
@@ -93,8 +93,7 @@ export default createRule<Options, MessageIds>({
   defaultOptions: [
     {
       multiline: {
-        delimiter: 'semi',
-        requireLast: true,
+        delimiter: 'semi'
       },
       singleline: {
         delimiter: 'semi',
@@ -118,6 +117,23 @@ export default createRule<Options, MessageIds>({
     );
 
     /**
+     * Check the member separator being used matches the delimiter.
+     * @param {ASTNode} node the node to be evaluated.
+     */
+    function checkMemberSeparatorStyle(
+      node: TSESTree.TSInterfaceBody | TSESTree.TSTypeLiteral,
+    ): void {
+      const isSingleLine = node.loc.start.line === node.loc.end.line;
+      const members = node.type === AST_NODE_TYPES.TSInterfaceBody ? node.body : node.members;
+      const typeOpts = node.type === AST_NODE_TYPES.TSInterfaceBody ? interfaceOptions : typeLiteralOptions;
+      const opts = isSingleLine ? typeOpts.singleline : typeOpts.multiline;
+
+      members.forEach((member, index) => {
+        checkLastToken(member, opts || {}, index === members.length - 1);
+      });
+    }
+
+    /**
      * Check the last token in the given member.
      * @param member the member to be evaluated.
      * @param opts the options to be validated.
@@ -133,10 +149,15 @@ export default createRule<Options, MessageIds>({
        * @param type the option name
        */
       function getOption(type: Delimiter): boolean {
+        if (isLast && opts.requireLast === undefined) {
+          return false
+        }
+
         if (isLast && !opts.requireLast) {
           // only turn the option on if its expecting no delimiter for the last member
           return type === 'none';
         }
+
         return opts.delimiter === type;
       }
 
@@ -214,29 +235,6 @@ export default createRule<Options, MessageIds>({
           },
         });
       }
-    }
-
-    /**
-     * Check the member separator being used matches the delimiter.
-     * @param {ASTNode} node the node to be evaluated.
-     */
-    function checkMemberSeparatorStyle(
-      node: TSESTree.TSInterfaceBody | TSESTree.TSTypeLiteral,
-    ): void {
-      const isSingleLine = node.loc.start.line === node.loc.end.line;
-
-      const members =
-        node.type === AST_NODE_TYPES.TSInterfaceBody ? node.body : node.members;
-
-      const typeOpts =
-        node.type === AST_NODE_TYPES.TSInterfaceBody
-          ? interfaceOptions
-          : typeLiteralOptions;
-      const opts = isSingleLine ? typeOpts.singleline : typeOpts.multiline;
-
-      members.forEach((member, index) => {
-        checkLastToken(member, opts || {}, index === members.length - 1);
-      });
     }
 
     return {

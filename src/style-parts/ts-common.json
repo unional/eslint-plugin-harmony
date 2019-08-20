@@ -10,12 +10,11 @@
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
-    "harmony/member-delimiter-style2": [
+    "harmony/ts-member-delimiter-style": [
       "error",
       {
         "multiline": {
-          "delimiter": "comma",
-          "requireLast": true
+          "delimiter": "comma"
         },
         "singleline": {
           "delimiter": "comma",

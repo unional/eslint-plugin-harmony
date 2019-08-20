@@ -1,5 +1,5 @@
-import memberDelimiterStyle from './typescript/member-delimiter-style';
+import tsMemberDelimiterStyle from './ts-member-delimiter-style';
 
 export const rules = {
-  'member-delimiter-style': memberDelimiterStyle
+  'ts-member-delimiter-style': tsMemberDelimiterStyle
 }
