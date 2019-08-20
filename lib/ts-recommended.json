@@ -1,8 +1,0 @@
-{
-    "extends": [
-        "./latest",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "./style-parts/ts-common.json"
-    ]
-}
