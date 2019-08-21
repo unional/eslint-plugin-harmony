@@ -33,9 +33,17 @@
     "build:watch": "tsc -w",
     "lint": "eslint --ext=js,ts .",
     "nuke": "rimraf lib node_modules",
+    "release": "standard-version",
     "test": "gulp"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/node": "^12.7.2",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
@@ -45,9 +53,11 @@
     "eslint-plugin-harmony": "file:.",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
+    "husky": "^3.0.4",
     "lodash.uniq": "^4.5.0",
     "plugin-error": "^1.0.1",
     "rimraf": "^3.0.0",
+    "standard-version": "^7.0.0",
     "through": "^2.3.8",
     "typescript": "^3.5.3"
   },
