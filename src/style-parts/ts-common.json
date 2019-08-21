@@ -30,7 +30,7 @@
       "warn",
       {
         "argsIgnorePattern": "^_",
-        "caughtErrors": "all",
+        "caughtErrors": "none",
         "ignoreRestSiblings": true
       }
     ],

@@ -33,7 +33,7 @@
     "build:watch": "tsc -w",
     "lint": "eslint --ext=js,ts .",
     "nuke": "rimraf lib node_modules",
-    "release": "standard-version",
+    "release": "yarn build && yarn test && standard-version",
     "test": "gulp"
   },
   "husky": {
