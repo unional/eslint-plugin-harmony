@@ -39,6 +39,14 @@
       "error",
       "only-multiline"
     ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
     "rest-spread-spacing": [
       "error"
     ]
