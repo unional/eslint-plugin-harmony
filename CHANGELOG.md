@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.9](https://github.com/unional/eslint-plugin-harmony/compare/v2.1.8...v2.1.9) (2019-10-24)
+
+
+### Bug Fixes
+
+* add @ts-eslint/parser as deps ([0d172ac](https://github.com/unional/eslint-plugin-harmony/commit/0d172ace769fd25709332f07fac485b11fbe46b5))
+
 ### [2.1.8](https://github.com/unional/eslint-plugin-harmony/compare/v2.1.7...v2.1.8) (2019-10-23)
 
 
