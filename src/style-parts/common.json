@@ -15,9 +15,10 @@
       "error",
       {
         "allow": [
-          "warn",
           "error",
-          "info"
+          "warn",
+          "info",
+          "assert"
         ]
       }
     ],
