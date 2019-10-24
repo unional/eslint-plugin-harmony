@@ -193,7 +193,7 @@
     regexpp "^2.0.1"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@2.5.0", "@typescript-eslint/experimental-utils@^2.0.0":
+"@typescript-eslint/experimental-utils@2.5.0", "@typescript-eslint/experimental-utils@^2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.5.0.tgz#383a97ded9a7940e5053449f6d73995e782b8fb1"
   integrity sha512-UgcQGE0GKJVChyRuN1CWqDW8Pnu7+mVst0aWrhiyuUD1J9c+h8woBdT4XddCvhcXDodTDVIfE3DzGHVjp7tUeQ==
@@ -202,7 +202,7 @@
     "@typescript-eslint/typescript-estree" "2.5.0"
     eslint-scope "^5.0.0"
 
-"@typescript-eslint/parser@^2.0.0":
+"@typescript-eslint/parser@^2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.5.0.tgz#858030ddd808fbbe88e03f42e5971efaccb8218a"
   integrity sha512-9UBMiAwIDWSl79UyogaBdj3hidzv6exjKUx60OuZuFnJf56tq/UMpdPcX09YmGqE8f4AnAueYtBxV8IcAT3jdQ==
@@ -1312,10 +1312,11 @@ eslint-config-prettier@^6.0.0:
     get-stdin "^6.0.0"
 
 "eslint-plugin-harmony@file:./.":
-  version "2.1.7"
+  version "2.1.8"
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.5.0"
-    "@typescript-eslint/experimental-utils" "^2.0.0"
+    "@typescript-eslint/experimental-utils" "^2.5.0"
+    "@typescript-eslint/parser" "^2.5.0"
 
 eslint-scope@^5.0.0:
   version "5.0.0"
