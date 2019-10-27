@@ -65,18 +65,6 @@ To use the eslint style, extends from one of the following:
 
 ### TypeScript
 
-To use the TypeScript styles, you need to also install
-[`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser) and
-[`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).:
-
-```sh
-npm install --save-dev eslint-plugin-harmony @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
-
-If you want to use the `ts-prettier` style, you will also need [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier).
-
-These are not installed by default so that you won't have extra dependencies installed if you only write JavaScript.
-
 The TypeScript style is extended from [`@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
 They are adjusted to the style in harmony.
@@ -88,7 +76,7 @@ it is recommended to use the `overrides.extends` feature in `eslint` to support 
 ```js
 {
   "extends": [
-    "plugin:harmony/latest.json"
+    "plugin:harmony/latest"
   ],
   "overrides": [
     {
