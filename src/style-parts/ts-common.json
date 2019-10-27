@@ -8,6 +8,7 @@
     "ecmaVersion": 2019
   },
   "rules": {
+    "@typescript-eslint/ban-ts-ignore": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
     "harmony/ts-member-delimiter-style": [
