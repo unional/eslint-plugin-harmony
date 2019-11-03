@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "./latest",
+    "./style-parts/recommended.json"
+  ]
+}
