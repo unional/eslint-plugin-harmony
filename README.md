@@ -54,6 +54,7 @@ To use the eslint style, extends from one of the following:
 
 ```js
 {
+  "extends": "plugin:harmony/recommended",
   "extends": "plugin:harmony/latest",
   "extends": "plugin:harmony/es5",
   "extends": "plugin:harmony/es5-strict",
@@ -76,7 +77,7 @@ it is recommended to use the `overrides.extends` feature in `eslint` to support 
 ```js
 {
   "extends": [
-    "plugin:harmony/latest"
+    "plugin:harmony/recommended"
   ],
   "overrides": [
     {
