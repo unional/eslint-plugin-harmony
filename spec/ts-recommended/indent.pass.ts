@@ -1,4 +1,4 @@
-export function foo() {
+export function foo(): void {
   switch (true) {
     case true:
       break

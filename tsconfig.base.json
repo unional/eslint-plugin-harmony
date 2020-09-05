@@ -12,6 +12,7 @@
     "noUnusedParameters": false,
     "removeComments": false,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true
   },

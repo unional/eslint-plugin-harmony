@@ -1,3 +1,3 @@
-export const foo = async (x = 'x') => {
+export const foo = async (x = 'x'): Promise<string> => {
   return x
 }

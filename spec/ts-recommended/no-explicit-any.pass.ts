@@ -1,3 +1,3 @@
-export function foo(x: any) {
+export function foo(x: any): any {
   return x
 }
