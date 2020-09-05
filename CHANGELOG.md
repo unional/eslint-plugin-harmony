@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v3.0.1...v4.0.0) (2020-09-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* TypeScript 4.0 support
+
+### Features
+
+* add @typescript-eslint/explicit-module-boundary-types setting ([49b3dd5](https://github.com/unional/eslint-plugin-harmony/commit/49b3dd5b4de216a22af8b0e261aeb303d3c27dc9))
+
 ### [2.1.9](https://github.com/unional/eslint-plugin-harmony/compare/v2.1.8...v2.1.9) (2019-10-24)
 
 
