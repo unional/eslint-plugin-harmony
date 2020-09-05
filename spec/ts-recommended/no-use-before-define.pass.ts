@@ -1,4 +1,4 @@
-export function task() {
+export function task(): string {
   return subTask()
 }
 
