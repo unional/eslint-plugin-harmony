@@ -1,4 +1,12 @@
 {
   "rules": {
+    "harmony/ts-member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none"
+        }
+      }
+    ]
   }
 }

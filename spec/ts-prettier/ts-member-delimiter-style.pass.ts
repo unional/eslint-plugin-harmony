@@ -1,5 +1,5 @@
-export type foo = { a: number, b: string }
+export type foo = { a: number; b: string }
 export type boo = {
-  a: number,
-  b: string,
+  a: number
+  b: string
 }
