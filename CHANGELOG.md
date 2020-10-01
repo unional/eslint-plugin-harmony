@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v5.0.0...v5.0.1) (2020-10-01)
+
+
+### Bug Fixes
+
+* **ts-prettier:** change brace-style to 1tbs ([f540980](https://github.com/unional/eslint-plugin-harmony/commit/f540980655f589d016eeb8e7915255f8231e74f7))
+
 ## [5.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v3.0.1...v5.0.0) (2020-10-01)
 
 
