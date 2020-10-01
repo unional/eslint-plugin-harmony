@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v3.0.1...v5.0.0) (2020-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* TypeScript 4.0 support
+
+### Features
+
+* add @typescript-eslint/explicit-module-boundary-types setting ([49b3dd5](https://github.com/unional/eslint-plugin-harmony/commit/49b3dd5b4de216a22af8b0e261aeb303d3c27dc9))
+
+
+### Bug Fixes
+
+* **ts-prettier:** adjust ts-member-delimiter-style ([b74c1e5](https://github.com/unional/eslint-plugin-harmony/commit/b74c1e5f17ff0668e8892448483d9d8af7ab7745))
+
 ## [4.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v3.0.1...v4.0.0) (2020-09-05)
 
 
