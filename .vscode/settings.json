@@ -17,6 +17,8 @@
   "prettier.eslintIntegration": true,
   "prettier.requireConfig": true,
   "cSpell.words": [
-    "singleline"
+    "eslintplugin",
+    "singleline",
+    "styleguide"
   ]
 }
