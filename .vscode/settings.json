@@ -15,5 +15,8 @@
     "typescriptreact"
   ],
   "prettier.eslintIntegration": true,
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "cSpell.words": [
+    "singleline"
+  ]
 }
