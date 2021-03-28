@@ -4,7 +4,6 @@
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build status][travis-image]][travis-url]
 
-[![Greenkeeper badge][green-keeper-image]][green-keeper-url]
 [![semantic-release][semantic-release-image]][semantic-release-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
@@ -60,7 +59,7 @@ To use the eslint style, extends from one of the following:
   "extends": "plugin:harmony/es5-strict",
   "extends": "plugin:harmony/ts-prettier", // experimental
   "extends": "plugin:harmony/ts-recommended", // or use overrides
-  "extends": "plugin:harmony/ts-recommended-requiring-type-checking", // or use overrides
+  "extends": "plugin:harmony/ts-recommended-type-check", // or use overrides
 }
 ```
 
@@ -93,7 +92,29 @@ it is recommended to use the `overrides.extends` feature in `eslint` to support 
 }
 ```
 
-Note that for `ts-recommended-requiring-type-checking` you still need to specify `parserOptions.project`.
+Note that for `ts-recommended-type-check` you still need to specify `parserOptions.project`.
+
+```json
+{
+  "extends": [
+    "plugin:harmony/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:harmony/ts-recommended-type-check"
+      ],
+      "parserOptions": {
+        "project": "tsconfig.json"
+      }
+    }
+  ]
+}
+```
 
 For more information, please check out [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
@@ -104,7 +125,7 @@ you need to use them in the setting:
 
 ![setting](2018-03-06-16-12-17.png)
 
-You also need to change your language version approprately:
+You also need to change your language version appropriately:
 
 ![language version](2018-03-06-16-14-48.png)
 
@@ -121,9 +142,6 @@ yarn bootstrap
 [downloads-url]: https://npmjs.org/package/eslint-plugin-harmony
 [travis-image]: https://img.shields.io/travis/unional/eslint-plugin-harmony/master.svg?style=flat
 [travis-url]: https://travis-ci.org/unional/eslint-plugin-harmony?branch=master
-[green-keeper-image]:
-https://badges.greenkeeper.io/unional/eslint-plugin-harmony.svg
-[green-keeper-url]:https://greenkeeper.io/
 [semantic-release-image]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]:https://github.com/semantic-release/semantic-release
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg
