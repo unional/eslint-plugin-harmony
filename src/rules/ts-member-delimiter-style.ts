@@ -61,9 +61,7 @@ export default createRule<Options, MessageIds>({
   meta: {
     type: 'suggestion',
     docs: {
-      description:
-        'Require a specific member delimiter style for interfaces and type literals',
-      category: 'Stylistic Issues',
+      description: 'Require a specific member delimiter style for interfaces and type literals',
       recommended: 'error',
     },
     fixable: 'code',
