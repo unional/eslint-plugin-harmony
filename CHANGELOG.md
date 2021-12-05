@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v5.1.0...v6.0.0) (2021-12-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* updated @typescript-eslint
+
+@typescript-eslint 4.x does not work with eslint 8.
+Upgrading to 5.x is a breaking change
+
+### Bug Fixes
+
+* remove category ([063e36a](https://github.com/unional/eslint-plugin-harmony/commit/063e36acf4edc478b01ed27a1ca700a1e58e0b6a))
+* update to support eslint 8 ([8156c1e](https://github.com/unional/eslint-plugin-harmony/commit/8156c1ebb7f462bbf82f78389bab5af6449b6efe))
+
 ### [5.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v5.0.0...v5.0.1) (2020-10-01)
 
 
