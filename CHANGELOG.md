@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v6.0.0...v6.0.1) (2022-04-02)
+
+
+### Bug Fixes
+
+* disable @typescript-eslint/no-empty-interface ([#44](https://github.com/unional/eslint-plugin-harmony/issues/44)) ([58ec617](https://github.com/unional/eslint-plugin-harmony/commit/58ec617a172844e8c6c2ee88b9c2590d6652580a))
+* update dependencies ([#45](https://github.com/unional/eslint-plugin-harmony/issues/45)) ([3500d8b](https://github.com/unional/eslint-plugin-harmony/commit/3500d8bc4cd9d7b5ed60e419185f43e7da2e2562))
+
 ## [6.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v5.1.0...v6.0.0) (2021-12-05)
 
 
