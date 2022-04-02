@@ -12,19 +12,8 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-delimiter-style": "off",
-    "harmony/ts-member-delimiter-style": [
-      "error",
-      {
-        "multiline": {
-          "delimiter": "comma"
-        },
-        "singleline": {
-          "delimiter": "comma",
-          "requireLast": false
-        }
-      }
-    ],
     "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
@@ -40,6 +29,18 @@
     "comma-dangle": [
       "error",
       "only-multiline"
+    ],
+    "harmony/ts-member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "comma"
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        }
+      }
     ],
     "quotes": [
       "error",
