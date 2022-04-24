@@ -15,15 +15,15 @@ A [`eslint`](https://eslint.org/) config styles package that work across IDEs.
 ## Design Principles
 
 There are several configurations available in this package.
-Although they are different as they are designed for different programers,
-here are the principles that they all follows:
+Although they are different as they are designed for different programmers,
+here are the principles that they all follow:
 
 - They are designed to be used by team
 - Each team member can use one of the supported IDE
 - The formatter available on each IDE should work with each configuration
 - Code should look well and consistent on each IDE with folding
   - so that when you stop by your team member's cube, the code looks the same.
-- Thrive for easy to write (with fewest keystrokes) while keeping the code clean
+- Thrive for easy to write (with the fewest keystrokes) while keeping the code clean
 
 ## Supported IDE
 
@@ -49,7 +49,7 @@ npm install --save-dev eslint-plugin-harmony
 
 ## Usage
 
-To use the eslint style, extends from one of the following:
+To use the ESLint style, extends from one of the following:
 
 ```js
 {
@@ -70,7 +70,7 @@ The TypeScript style is extended from [`@typescript-eslint/eslint-plugin`](https
 They are adjusted to the style in harmony.
 Also, the configuration are simplified.
 
-Since you will likely to have some JavaScript files in your TypeScript project (e.g. `jest.config.js`, `webpack.config.js`, etc),
+Since you will likely to have some JavaScript files in your TypeScript project (e.g. `jest.config.js`, `webpack.config.js`, etc.),
 it is recommended to use the `overrides.extends` feature in `eslint` to support mixed environment:
 
 ```js

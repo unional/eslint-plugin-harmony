@@ -1,11 +1,19 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "lib/**/*.json"
-      ],
-      "url": "http://json.schemastore.org/eslintrc"
-    }
+  "cSpell.ignorePaths": [
+    ".git/objects",
+    ".vscode-insiders",
+    ".vscode",
+    "CHANGELOG.md",
+    "node_modules",
+    "package-lock.json",
+    "vscode-extension",
+    "yarn.lock"
+  ],
+  "cSpell.words": [
+    "eslintplugin",
+    "singleline",
+    "stroustrup",
+    "styleguide"
   ],
   "eslint.enable": true,
   "eslint.validate": [
@@ -14,11 +22,20 @@
     "typescript",
     "typescriptreact"
   ],
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "lib/**/*.json"
+      ],
+      "url": "http://json.schemastore.org/eslintrc"
+    },
+    {
+      "fileMatch": [
+        "tsconfig.*.json"
+      ],
+      "url": "http://json.schemastore.org/tsconfig"
+    }
+  ],
   "prettier.eslintIntegration": true,
-  "prettier.requireConfig": true,
-  "cSpell.words": [
-    "eslintplugin",
-    "singleline",
-    "styleguide"
-  ]
+  "prettier.requireConfig": true
 }
