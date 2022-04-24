@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* move eslint-plugin and eslint-config-prettier as peer depenedencies ([37ac6f5](https://github.com/unional/eslint-plugin-harmony/commit/37ac6f57b649ad287c3d7103b1d8d96586c28d22))
+* move eslint-plugin and eslint-config-prettier as peer dependencies ([37ac6f5](https://github.com/unional/eslint-plugin-harmony/commit/37ac6f57b649ad287c3d7103b1d8d96586c28d22))
 
 ### [6.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v6.0.0...v6.0.1) (2022-04-02)
 
@@ -24,13 +24,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 * updated @typescript-eslint
 
-@typescript-eslint 4.x does not work with eslint 8.
+@typescript-eslint 4.x does not work with ESLint 8.
 Upgrading to 5.x is a breaking change
 
 ### Bug Fixes
 
 * remove category ([063e36a](https://github.com/unional/eslint-plugin-harmony/commit/063e36acf4edc478b01ed27a1ca700a1e58e0b6a))
-* update to support eslint 8 ([8156c1e](https://github.com/unional/eslint-plugin-harmony/commit/8156c1ebb7f462bbf82f78389bab5af6449b6efe))
+* update to support ESLint 8 ([8156c1e](https://github.com/unional/eslint-plugin-harmony/commit/8156c1ebb7f462bbf82f78389bab5af6449b6efe))
 
 ### [5.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v5.0.0...v5.0.1) (2020-10-01)
 
