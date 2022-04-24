@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.6](https://github.com/unional/eslint-plugin-harmony/compare/v6.0.5...v6.0.6) (2022-04-24)
+
 ### [6.0.5](https://github.com/unional/eslint-plugin-harmony/compare/v6.0.4...v6.0.5) (2022-04-24)
 
 ### [6.0.2](https://github.com/unional/eslint-plugin-harmony/compare/v6.0.1...v6.0.2) (2022-04-02)
