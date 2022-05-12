@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.1](https://github.com/unional/eslint-plugin-harmony/compare/v7.0.0...v7.0.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* disable indent rule ([56bc361](https://github.com/unional/eslint-plugin-harmony/commit/56bc361d62f8ed32c8e96440248bb88bcb4abf3f))
+
 ## [7.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v6.1.1...v7.0.0) (2022-05-12)
 
 
