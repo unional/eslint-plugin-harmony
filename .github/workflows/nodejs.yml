@@ -1,9 +1,7 @@
 name: nodejs
 on:
   push:
-    branches:
-      - master
-      - "greenkeeper/*"
+    branches: [main]
   pull_request:
     types: [opened, synchronize]
 jobs:
