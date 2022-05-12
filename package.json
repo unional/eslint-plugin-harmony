@@ -33,7 +33,6 @@
     "build:watch": "tsc -w",
     "lint": "eslint --ext=js,ts .",
     "nuke": "rimraf lib node_modules",
-    "prepublishOnly": "node -e \"console.error('run yarn release instead'); process.exit(1)\"",
     "prettier": "prettier spec/ts-prettier/**/*.pass.ts --write",
     "release": "yarn build && yarn test && standard-version",
     "test": "gulp"
