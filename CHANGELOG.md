@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/unional/eslint-plugin-harmony/compare/v6.1.1...v7.0.0) (2022-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* move @typescript-eslint/parser to peer deps
+
+Marking this as breaking change because
+consumers need to install `@typescript-eslint/parser` themselves.
+
+### Bug Fixes
+
+* reset [@typescript-eslint](https://github.com/typescript-eslint) peer to 5.0.0 ([c88ca9d](https://github.com/unional/eslint-plugin-harmony/commit/c88ca9d9f5565e6741f8d26de301ccc6bb5ac7e3))
+
 ### [6.1.1](https://github.com/unional/eslint-plugin-harmony/compare/v6.1.0...v6.1.1) (2022-05-12)
 
 
