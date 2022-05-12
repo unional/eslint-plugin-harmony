@@ -12,8 +12,10 @@
   "cSpell.words": [
     "eslintplugin",
     "singleline",
+    "snyk",
     "stroustrup",
-    "styleguide"
+    "styleguide",
+    "TSES"
   ],
   "eslint.enable": true,
   "eslint.validate": [

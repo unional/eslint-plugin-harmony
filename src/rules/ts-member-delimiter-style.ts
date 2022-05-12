@@ -1,12 +1,12 @@
-import { TSESTree, AST_NODE_TYPES, ESLintUtils } from '@typescript-eslint/experimental-utils';
-import { createRule } from '../utils/createRule';
+import { TSESTree, AST_NODE_TYPES, ESLintUtils } from '@typescript-eslint/experimental-utils'
+import { createRule } from '../utils/createRule'
 
 type Delimiter = 'comma' | 'none' | 'semi'
 
 type TypeOptions = {
   delimiter?: Delimiter,
   requireLast?: boolean
-};
+}
 
 type BaseOptions = {
   multiline?: {
@@ -17,20 +17,20 @@ type BaseOptions = {
     delimiter?: 'comma' | 'semi',
     requireLast?: boolean
   },
-};
+}
 type Config = BaseOptions & {
   overrides?: {
     typeLiteral?: BaseOptions,
     interface?: BaseOptions
   },
-};
+}
 
-type Options = [Config];
+type Options = [Config]
 type MessageIds =
   | 'unexpectedComma'
   | 'unexpectedSemi'
   | 'expectedComma'
-  | 'expectedSemi';
+  | 'expectedSemi'
 
 const definition = {
   type: 'object',
@@ -54,7 +54,7 @@ const definition = {
     },
   },
   additionalProperties: false,
-};
+}
 
 export default createRule<Options, MessageIds>({
   name: 'member-delimiter-style',
@@ -100,19 +100,19 @@ export default createRule<Options, MessageIds>({
     },
   ],
   create(context, [options]) {
-    const sourceCode = context.getSourceCode();
+    const sourceCode = context.getSourceCode()
 
     // use the base options as the defaults for the cases
-    const baseOptions = options;
-    const overrides = baseOptions.overrides || {};
+    const baseOptions = options
+    const overrides = baseOptions.overrides || {}
     const interfaceOptions: BaseOptions = ESLintUtils.deepMerge(
       baseOptions,
       overrides.interface,
-    );
+    )
     const typeLiteralOptions: BaseOptions = ESLintUtils.deepMerge(
       baseOptions,
       overrides.typeLiteral,
-    );
+    )
 
     /**
      * Check the member separator being used matches the delimiter.
@@ -121,14 +121,14 @@ export default createRule<Options, MessageIds>({
     function checkMemberSeparatorStyle(
       node: TSESTree.TSInterfaceBody | TSESTree.TSTypeLiteral,
     ): void {
-      const isSingleLine = node.loc.start.line === node.loc.end.line;
-      const members = node.type === AST_NODE_TYPES.TSInterfaceBody ? node.body : node.members;
-      const typeOpts = node.type === AST_NODE_TYPES.TSInterfaceBody ? interfaceOptions : typeLiteralOptions;
-      const opts = isSingleLine ? typeOpts.singleline : typeOpts.multiline;
+      const isSingleLine = node.loc.start.line === node.loc.end.line
+      const members = node.type === AST_NODE_TYPES.TSInterfaceBody ? node.body : node.members
+      const typeOpts = node.type === AST_NODE_TYPES.TSInterfaceBody ? interfaceOptions : typeLiteralOptions
+      const opts = isSingleLine ? typeOpts.singleline : typeOpts.multiline
 
       members.forEach((member, index) => {
-        checkLastToken(member, opts || {}, index === members.length - 1);
-      });
+        checkLastToken(member, opts || {}, index === members.length - 1)
+      })
     }
 
     /**
@@ -153,51 +153,51 @@ export default createRule<Options, MessageIds>({
 
         if (isLast && !opts.requireLast) {
           // only turn the option on if its expecting no delimiter for the last member
-          return type === 'none';
+          return type === 'none'
         }
 
-        return opts.delimiter === type;
+        return opts.delimiter === type
       }
 
-      let messageId: MessageIds | null = null;
-      let missingDelimiter = false;
+      let messageId: MessageIds | null = null
+      let missingDelimiter = false
       const lastToken = sourceCode.getLastToken(member, {
         includeComments: false,
-      });
+      })
       if (!lastToken) {
-        return;
+        return
       }
 
-      const optsSemi = getOption('semi');
-      const optsComma = getOption('comma');
-      const optsNone = getOption('none');
+      const optsSemi = getOption('semi')
+      const optsComma = getOption('comma')
+      const optsNone = getOption('none')
 
       if (lastToken.value === ';') {
         if (optsComma) {
-          messageId = 'expectedComma';
+          messageId = 'expectedComma'
         }
         else if (optsNone) {
-          missingDelimiter = true;
-          messageId = 'unexpectedSemi';
+          missingDelimiter = true
+          messageId = 'unexpectedSemi'
         }
       }
       else if (lastToken.value === ',') {
         if (optsSemi) {
-          messageId = 'expectedSemi';
+          messageId = 'expectedSemi'
         }
         else if (optsNone) {
-          missingDelimiter = true;
-          messageId = 'unexpectedComma';
+          missingDelimiter = true
+          messageId = 'unexpectedComma'
         }
       }
       else {
         if (optsSemi) {
-          missingDelimiter = true;
-          messageId = 'expectedSemi';
+          missingDelimiter = true
+          messageId = 'expectedSemi'
         }
         else if (optsComma) {
-          missingDelimiter = true;
-          messageId = 'expectedComma';
+          missingDelimiter = true
+          messageId = 'expectedComma'
         }
       }
 
@@ -218,26 +218,26 @@ export default createRule<Options, MessageIds>({
           fix(fixer) {
             if (optsNone) {
               // remove the unneeded token
-              return fixer.remove(lastToken);
+              return fixer.remove(lastToken)
             }
 
-            const token = optsSemi ? ';' : ',';
+            const token = optsSemi ? ';' : ','
 
             if (missingDelimiter) {
               // add the missing delimiter
-              return fixer.insertTextAfter(lastToken, token);
+              return fixer.insertTextAfter(lastToken, token)
             }
 
             // correct the current delimiter
-            return fixer.replaceText(lastToken, token);
+            return fixer.replaceText(lastToken, token)
           },
-        });
+        })
       }
     }
 
     return {
       TSInterfaceBody: checkMemberSeparatorStyle,
       TSTypeLiteral: checkMemberSeparatorStyle,
-    };
+    }
   },
-});
+})
