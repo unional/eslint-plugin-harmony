@@ -31,16 +31,13 @@
     "bootstrap": "yarn build && yarn link && yarn link eslint-plugin-harmony",
     "build": "tsc -p tsconfig.lib.json",
     "build:watch": "tsc -w",
-    "lint": "eslint --ext=js,ts .",
+    "lint": "eslint --ext=js,ts src",
     "nuke": "rimraf lib node_modules",
+    "prepare": "husky install && yarn bootstrap",
     "prettier": "prettier spec/ts-prettier/**/*.pass.ts --write",
     "release": "yarn build && yarn test && standard-version",
-    "test": "gulp"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "test": "gulp",
+    "verify": "yarn build && yarn lint && yarn test"
   },
   "dependencies": {
     "@typescript-eslint/experimental-utils": "^5.23.0"
@@ -72,5 +69,6 @@
     "@typescript-eslint/parser": "^5.23.0",
     "eslint": ">=8.4.0",
     "eslint-config-prettier": "^8.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.18"
 }
