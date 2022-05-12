@@ -57,7 +57,7 @@
     "eslint-plugin-harmony": "file:.",
     "gulp": "4.0.2",
     "gulp-eslint": "6.0.0",
-    "husky": "7.0.4",
+    "husky": "8.0.1",
     "lodash.uniq": "4.5.0",
     "npm-check-updates": "12.5.11",
     "plugin-error": "1.0.1",
