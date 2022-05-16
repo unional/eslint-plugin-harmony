@@ -5,5 +5,9 @@
     "prettier",
     "./style-parts/ts-common",
     "./style-parts/ts-prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "harmony"
   ]
 }
