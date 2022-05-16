@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/unional/eslint-plugin-harmony/compare/v7.0.2...v7.1.0) (2022-05-16)
+
+
+### Features
+
+* add CRA variant for TypeScript ([9b1dad9](https://github.com/unional/eslint-plugin-harmony/commit/9b1dad97aeb3f07c365bb85638b68f0b414d3197))
+
 ### [7.0.2](https://github.com/unional/eslint-plugin-harmony/compare/v7.0.1...v7.0.2) (2022-05-15)
 
 
