@@ -2,7 +2,6 @@
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
-[![Build status][travis-image]][travis-url]
 
 [![semantic-release][semantic-release-image]][semantic-release-url]
 
@@ -60,6 +59,8 @@ To use the ESLint style, extends from one of the following:
   "extends": "plugin:harmony/ts-prettier", // experimental
   "extends": "plugin:harmony/ts-recommended", // or use overrides
   "extends": "plugin:harmony/ts-recommended-type-check", // or use overrides
+  "extends": "plugin:harmony/ts-recommended-cra",
+  "extends": "plugin:harmony/ts-recommended-type-check-cra",
 }
 ```
 
@@ -140,8 +141,6 @@ yarn bootstrap
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony
 [downloads-image]: https://img.shields.io/npm/dm/eslint-plugin-harmony.svg?style=flat
 [downloads-url]: https://npmjs.org/package/eslint-plugin-harmony
-[travis-image]: https://img.shields.io/travis/unional/eslint-plugin-harmony/master.svg?style=flat
-[travis-url]: https://travis-ci.org/unional/eslint-plugin-harmony?branch=master
 [semantic-release-image]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]:https://github.com/semantic-release/semantic-release
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg

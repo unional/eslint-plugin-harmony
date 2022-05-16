@@ -6,7 +6,6 @@
     "./style-parts/ts-common.json"
   ],
   "plugins": [
-    "@typescript-eslint",
     "harmony"
   ]
 }

@@ -7,7 +7,6 @@
     "./style-parts/ts-common"
   ],
   "plugins": [
-    "@typescript-eslint",
     "harmony"
   ],
   "rules": {
