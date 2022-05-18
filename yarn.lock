@@ -1776,7 +1776,7 @@ eslint-config-prettier@^8.0.0:
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
 "eslint-plugin-harmony@file:.":
-  version "7.0.2"
+  version "7.1.0"
   dependencies:
     "@typescript-eslint/experimental-utils" "^5.23.0"
     "@typescript-eslint/parser" "^5.23.0"
@@ -3894,10 +3894,10 @@ npm-bundled@^1.1.1, npm-bundled@^1.1.2:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@13.0.0:
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-13.0.0.tgz#80d7b50885183bae9ceaa4eba85f9a2b1555d05b"
-  integrity sha512-xy19rT3Al1uZSWMYb2kJFryM33tzXjaeLWhdzHdadw4aVfwz+GQrnuehpK2RwgYol1n+LyxrDzPHrwmmJnWiTg==
+npm-check-updates@13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-13.0.1.tgz#33a68188edbf10bda435b6325ef1e67462d3d069"
+  integrity sha512-DU0/pDWrc4kTgc9V5MtM7RPoUrMBfDzSxcCBt+hJjSyxQ47ULrjWhVwpNpUmHCAUfHYdzwYKGW/Z65/vKwWNag==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"
