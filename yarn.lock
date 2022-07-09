@@ -1118,11 +1118,6 @@ ci-info@^3.2.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.3.2.tgz#6d2967ffa407466481c6c90b6e16b3098f080128"
   integrity sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==
 
-cint@^8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/cint/-/cint-8.2.1.tgz#70386b1b48e2773d0d63166a55aff94ef4456a12"
-  integrity sha1-cDhrG0jidz0NYxZqVa/5TvRFahI=
-
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -4028,13 +4023,12 @@ npm-bundled@^1.1.1, npm-bundled@^1.1.2:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@15.2.2:
-  version "15.2.2"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-15.2.2.tgz#1410115e2ac473a93471693c2b2f19ac8f64195e"
-  integrity sha512-SD1bDHYS5OLxN/63zcktzvpfmIhmWL7Uud2M/OaGvhP5AWhvyvaHTTGbGk5VbsqmNYz3TdQTAktNIsfjmsPMNQ==
+npm-check-updates@15.2.5:
+  version "15.2.5"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-15.2.5.tgz#ca5116139db5b2cf50c4d90d83d357e7b6b75f68"
+  integrity sha512-PgJCl9iFx2LK/JVtlDVM8CnQzRaksIkvPO7JduILVnpU2UR4a/g6nBvDCK09WJrhTyyMar2hJw7SNz0Ew0nV1g==
   dependencies:
     chalk "^4.1.2"
-    cint "^8.2.1"
     cli-table "^0.3.11"
     commander "^9.3.0"
     fast-memoize "^2.5.2"
