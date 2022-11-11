@@ -4111,10 +4111,10 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@16.3.18:
-  version "16.3.18"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.3.18.tgz#0b6ba72289b4846d9b1e1dea88af420de757765b"
-  integrity sha512-J4qOkWti3D3mDNbo1D7oBEWtSct+HxwU1rRXJyMEPOrkyEXssc1KS7pgvtsXFO8QMtSg7dLyxyi8stLC7ym4+g==
+npm-check-updates@16.3.19:
+  version "16.3.19"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.3.19.tgz#dadbfa28b130276a3ddf9c8cbf157eff69f9d222"
+  integrity sha512-VbM9C3T/eLPysPpULKzOg0K+YzXcoUGla7k5hOtjhTnsgqAVETVFC8KDGaCx+se27jZwBo4i3uW+jFKW7tvBjw==
   dependencies:
     chalk "^5.1.2"
     cli-table "^0.3.11"
