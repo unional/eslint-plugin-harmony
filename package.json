@@ -57,7 +57,7 @@
     "gulp-eslint": "6.0.0",
     "husky": "8.0.2",
     "lodash.uniq": "4.5.0",
-    "npm-check-updates": "16.4.1",
+    "npm-check-updates": "16.4.2",
     "plugin-error": "2.0.0",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
