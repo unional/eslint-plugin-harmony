@@ -9,7 +9,6 @@ on:
         default: false
   push:
     branches: [main]
-
 jobs:
   code:
     uses: unional/.github/.github/workflows/yarn-verify.yml@main
