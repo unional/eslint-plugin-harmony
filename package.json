@@ -60,7 +60,7 @@
     "npm-check-updates": "16.14.4",
     "plugin-error": "2.0.1",
     "prettier": "3.0.3",
-    "rimraf": "5.0.4",
+    "rimraf": "5.0.5",
     "standard-version": "9.5.0",
     "through": "2.3.8",
     "typescript": "5.1.6"
