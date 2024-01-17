@@ -59,7 +59,7 @@
     "lodash.uniq": "4.5.0",
     "npm-check-updates": "16.14.12",
     "plugin-error": "2.0.1",
-    "prettier": "3.2.3",
+    "prettier": "3.2.4",
     "rimraf": "5.0.5",
     "standard-version": "9.5.0",
     "through": "2.3.8",
