@@ -28,16 +28,16 @@
     "ide-configs"
   ],
   "scripts": {
-    "bootstrap": "yarn build && yarn link && yarn link eslint-plugin-harmony",
+    "bootstrap": "pnpm build && pnpm link && pnpm link eslint-plugin-harmony",
     "build": "tsc -p tsconfig.lib.json",
     "build:watch": "tsc -w",
     "lint": "eslint --ext=js,ts src",
     "nuke": "rimraf lib node_modules",
-    "prepare": "husky install && yarn bootstrap",
+    "prepare": "husky install && pnpm bootstrap",
     "prettier": "prettier spec/ts-prettier/**/*.pass.ts --write",
-    "release": "yarn build && yarn test && standard-version",
+    "release": "pnpm build && pnpm test && standard-version",
     "test": "gulp",
-    "verify": "yarn build && yarn lint && yarn test"
+    "verify": "pnpm build && pnpm lint && pnpm test"
   },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
@@ -75,5 +75,5 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@1.22.21"
+  "packageManager": "pnpm@8.14.1"
 }
