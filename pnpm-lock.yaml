@@ -37,9 +37,6 @@ devDependencies:
   eslint-config-prettier:
     specifier: ^9.0.0
     version: 9.1.0(eslint@8.56.0)
-  eslint-plugin-harmony:
-    specifier: file:.
-    version: file:(@typescript-eslint/eslint-plugin@6.19.0)(eslint-config-prettier@9.1.0)(eslint@8.56.0)(typescript@5.1.6)
   gulp:
     specifier: 4.0.2
     version: 4.0.2
@@ -586,6 +583,7 @@ packages:
 
   /@rushstack/eslint-patch@1.7.0:
     resolution: {integrity: sha512-Jh4t/593gxs0lJZ/z3NnasKlplXT2f+4y/LZYuaKZW5KAaiVFL/fThhs+17EbUd53jUVJ0QudYCBGbN/psvaqg==}
+    dev: false
 
   /@semantic-release/commit-analyzer@11.1.0(semantic-release@23.0.0):
     resolution: {integrity: sha512-cXNTbv3nXR2hlzHjAMgbuiQVtvWHTlwwISt60B+4NZv01y/QRY7p2HcJm8Eh2StzcTJoNnflvKjHH/cjFS7d5g==}
@@ -837,6 +835,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: false
 
   /@typescript-eslint/parser@6.19.0(eslint@8.56.0)(typescript@5.1.6):
     resolution: {integrity: sha512-1DyBLG5SH7PYCd00QlroiW60YJ4rWMuUGa/JBV0iZuqi4l4IK3twKPq5ZkEebmGqRjXWVgsUzfd3+nZveewgow==}
@@ -864,6 +863,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
+    dev: false
 
   /@typescript-eslint/scope-manager@6.19.0:
     resolution: {integrity: sha512-dO1XMhV2ehBI6QN8Ufi7I10wmUovmLU0Oru3n5LVlM2JuzB4M+dVphCPLkVpKvGij2j/pHBWuJ9piuXx+BhzxQ==}
@@ -895,6 +895,7 @@ packages:
   /@typescript-eslint/types@5.62.0:
     resolution: {integrity: sha512-87NVngcbVXUahrRTqIK27gD2t5Cu1yuCXxbLcFtCzZGlfyVWWh8mLHkoxzjsB6DDNnvdL+fW8MiwPEJyGJQDgQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
 
   /@typescript-eslint/types@6.19.0:
     resolution: {integrity: sha512-lFviGV/vYhOy3m8BJ/nAKoAyNhInTdXpftonhWle66XHAtT1ouBlkjL496b5H5hb8dWXHwtypTqgtb/DEa+j5A==}
@@ -919,6 +920,7 @@ packages:
       typescript: 5.1.6
     transitivePeerDependencies:
       - supports-color
+    dev: false
 
   /@typescript-eslint/typescript-estree@6.19.0(typescript@5.1.6):
     resolution: {integrity: sha512-o/zefXIbbLBZ8YJ51NlkSAt2BamrK6XOmuxSR3hynMIzzyMY33KuJ9vuMdFSXW+H0tVvdF9qBPTHA91HDb4BIQ==}
@@ -959,6 +961,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: false
 
   /@typescript-eslint/utils@6.19.0(eslint@8.56.0)(typescript@5.1.6):
     resolution: {integrity: sha512-QR41YXySiuN++/dC9UArYOg4X86OAYP83OWTewpVx5ct1IZhjjgTLocj7QNxGhWoTqknsgpl7L+hGygCO+sdYw==}
@@ -985,6 +988,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
+    dev: false
 
   /@typescript-eslint/visitor-keys@6.19.0:
     resolution: {integrity: sha512-hZaUCORLgubBvtGpp1JEFEazcuEdfxta9j4iUwdSAr7mEsYYAp3EAUyCZk3VEEqGj6W+AV4uWyrDGtrlawAsgQ==}
@@ -6551,6 +6555,7 @@ packages:
     dependencies:
       tslib: 1.14.1
       typescript: 5.1.6
+    dev: false
 
   /tuf-js@1.1.7:
     resolution: {integrity: sha512-i3P9Kgw3ytjELUfpuKVDNBJvk4u5bXL6gskv572mcevPbSKCV3zt3djhmlEQ65yERjIbOSncy7U4cQJaB1CBCg==}
@@ -7073,26 +7078,3 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  file:(@typescript-eslint/eslint-plugin@6.19.0)(eslint-config-prettier@9.1.0)(eslint@8.56.0)(typescript@5.1.6):
-    resolution: {directory: '', type: directory}
-    id: 'file:'
-    name: eslint-plugin-harmony
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': '>= 6.0.0'
-      eslint: '>=8.4.0'
-      eslint-config-prettier: '>= 9.0.0'
-    peerDependenciesMeta:
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      '@rushstack/eslint-patch': 1.7.0
-      '@typescript-eslint/eslint-plugin': 6.19.0(@typescript-eslint/parser@6.19.0)(eslint@8.56.0)(typescript@5.1.6)
-      '@typescript-eslint/experimental-utils': 5.62.0(eslint@8.56.0)(typescript@5.1.6)
-      '@typescript-eslint/parser': 6.19.0(eslint@8.56.0)(typescript@5.1.6)
-      eslint: 8.56.0
-      eslint-config-prettier: 9.1.0(eslint@8.56.0)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
