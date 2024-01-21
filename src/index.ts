@@ -9,6 +9,7 @@ import tsRecommendedTypeCheckCra from './ts-recommended-type-check-cra.json'
 import tsRecommendedTypeCheck2 from './ts-recommended-requiring-type-checking.json'
 import tsRecommended from './ts-recommended.json'
 import tsRecommendedCra from './ts-recommended-cra.json'
+import {  type TSESLint } from '@typescript-eslint/experimental-utils'
 
 export = {
   configs: {

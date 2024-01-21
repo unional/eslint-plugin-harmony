@@ -8,7 +8,6 @@
     ],
     "moduleResolution": "node",
     "newLine": "LF",
-    "noUnusedLocals": true,
     "noUnusedParameters": false,
     "removeComments": false,
     "resolveJsonModule": true,

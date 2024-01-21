@@ -1,4 +1,4 @@
-import { TSESTree, AST_NODE_TYPES, ESLintUtils } from '@typescript-eslint/experimental-utils'
+import { TSESTree, AST_NODE_TYPES, ESLintUtils, type TSESLint } from '@typescript-eslint/experimental-utils'
 import { createRule } from '../utils/createRule'
 
 type Delimiter = 'comma' | 'none' | 'semi'
