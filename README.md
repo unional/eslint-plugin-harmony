@@ -133,8 +133,8 @@ You also need to change your language version appropriately:
 ## Contribute
 
 ```sh
-yarn
-yarn bootstrap
+pnpm i
+pnpm bootstrap
 ```
 
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-harmony.svg?style=flat

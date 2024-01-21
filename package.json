@@ -28,12 +28,12 @@
     "ide-configs"
   ],
   "scripts": {
-    "bootstrap": "pnpm build && pnpm link && pnpm link eslint-plugin-harmony",
+    "bootstrap": "pnpm build && pnpm link .",
     "build": "tsc -p tsconfig.lib.json",
     "build:watch": "tsc -w",
     "lint": "eslint --ext=js,ts src",
     "nuke": "rimraf lib node_modules",
-    "prepare": "husky install && pnpm bootstrap",
+    "prepare": "husky install",
     "prettier": "prettier spec/ts-prettier/**/*.pass.ts --write",
     "release": "pnpm build && pnpm test && standard-version",
     "test": "gulp",

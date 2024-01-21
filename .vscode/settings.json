@@ -7,7 +7,7 @@
     "node_modules",
     "package-lock.json",
     "vscode-extension",
-    "yarn.lock"
+    "pnpm-lock.yaml"
   ],
   "cSpell.words": [
     "eslintplugin",
