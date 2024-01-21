@@ -7,19 +7,6 @@ on:
         description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
         required: false
         default: false
-      node-version:
-        type: string
-        required: false
-        default: "[16, 18, 20]"
-      pnpm-version:
-        type: string
-        required: false
-        default: 8.14.1
-      debug_enabled:
-        type: boolean
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
-        required: false
-        default: false
   pull_request:
     types: [opened, synchronize]
 
@@ -28,13 +15,12 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
-        os: ${{ fromJson(inputs.os) }}
-        node-version: ${{ fromJson(inputs.node-version) }}
+        node-version: [16, 18, 20]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
-          version: ${{ inputs.pnpm-version }}
+          version: 8.14.1
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -42,7 +28,7 @@ jobs:
           cache: pnpm
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
+        if: ${{ inputs.debug_enabled }}
       - name: Install Dependencies
         run: pnpm install
       - run: pnpm bootstrap

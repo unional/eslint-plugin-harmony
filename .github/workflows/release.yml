@@ -7,19 +7,6 @@ on:
         description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
         required: false
         default: false
-      node-version:
-        type: string
-        required: false
-        default: "[16, 18, 20]"
-      pnpm-version:
-        type: string
-        required: false
-        default: 8.14.1
-      debug_enabled:
-        type: boolean
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
-        required: false
-        default: false
   push:
     branches: [main]
 jobs:
@@ -27,13 +14,12 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
-        os: ${{ fromJson(inputs.os) }}
-        node-version: ${{ fromJson(inputs.node-version) }}
+        node-version: [16, 18, 20]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
-          version: ${{ inputs.pnpm-version }}
+          version: 8.14.1
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -49,7 +35,7 @@ jobs:
         run: pnpm verify
 
       - name: codecov
-        if: matrix.os == 'ubuntu-latest' && matrix.node-version == 18
+        if: matrix.node-version == 18
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
@@ -64,7 +50,7 @@ jobs:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
       - uses: pnpm/action-setup@v2
         with:
-          version: ${{ inputs.pnpm-version }}
+          version: 8.14.1
       - uses: actions/setup-node@v3
         with:
           node-version: 18
