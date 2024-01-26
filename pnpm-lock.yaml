@@ -50,8 +50,8 @@ devDependencies:
     specifier: 4.5.0
     version: 4.5.0
   npm-check-updates:
-    specifier: 16.14.13
-    version: 16.14.13
+    specifier: 16.14.14
+    version: 16.14.14
   plugin-error:
     specifier: 2.0.1
     version: 2.0.1
@@ -4603,8 +4603,8 @@ packages:
       npm-normalize-package-bin: 3.0.1
     dev: true
 
-  /npm-check-updates@16.14.13:
-    resolution: {integrity: sha512-vuRTJUoOElBDQ1Z5/UqqgNfExteSdrmwKNV6xuZtiyuKENFduYsy+IhDvCIC9fI1F+MD4zWtq9WCBwfOGfxy7Q==}
+  /npm-check-updates@16.14.14:
+    resolution: {integrity: sha512-Y3ajS/Ep40jM489rLBdz9jehn/BMil5s9fA4PSr2ZJxxSmtLWCSmRqsI2IEZ9Nb3MTMu8a3s7kBs0l+JbjdkTA==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
