@@ -59,7 +59,7 @@
     "npm-check-updates": "16.14.20",
     "plugin-error": "2.0.1",
     "prettier": "3.2.5",
-    "rimraf": "5.0.6",
+    "rimraf": "5.0.7",
     "semantic-release": "^23.0.0",
     "through": "2.3.8",
     "typescript": "5.4.5"
