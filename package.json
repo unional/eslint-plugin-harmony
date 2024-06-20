@@ -62,7 +62,7 @@
     "rimraf": "5.0.7",
     "semantic-release": "^24.0.0",
     "through": "2.3.8",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">= 6.0.0",
