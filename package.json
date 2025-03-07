@@ -45,8 +45,8 @@
     "@typescript-eslint/parser": "^6.19.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.7.1",
-    "@commitlint/config-conventional": "19.7.1",
+    "@commitlint/cli": "19.8.0",
+    "@commitlint/config-conventional": "19.8.0",
     "@types/node": "22.13.9",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "ansi-colors": "4.1.3",
