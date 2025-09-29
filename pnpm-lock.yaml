@@ -52,8 +52,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0
       npm-check-updates:
-        specifier: 18.3.0
-        version: 18.3.0
+        specifier: 19.0.0
+        version: 19.0.0
       plugin-error:
         specifier: 2.0.1
         version: 2.0.1
@@ -2047,9 +2047,9 @@ packages:
     resolution: {integrity: sha512-KGvQ0cB70AQfg107Xvs/Fbu+dGmZoTRJp2TaPwcwQm3/7PteUyN2BCgk8KBMPGBUXZdVwyWS8fDCGFygBm19UQ==}
     engines: {node: '>= 0.10'}
 
-  npm-check-updates@18.3.0:
-    resolution: {integrity: sha512-Wcm90Af5JuzxwPTtdLl0OH2O1TCeqPTYBch1M3bePmfqylRMiFXXh+uglE4sfMjwdTjw7aIReMwudXeqoYvh2Q==}
-    engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
+  npm-check-updates@19.0.0:
+    resolution: {integrity: sha512-qcfjZEv6xB+WvW24S8wU1MKISPPiTREraBg62XDo/7zmOLXH3Zj7ti2v/LRfks0qITU8SDZLTWwgIitflvursw==}
+    engines: {node: '>=20.0.0', npm: '>=8.12.1'}
     hasBin: true
 
   npm-run-path@5.2.0:
@@ -5480,7 +5480,7 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  npm-check-updates@18.3.0: {}
+  npm-check-updates@19.0.0: {}
 
   npm-run-path@5.2.0:
     dependencies:
