@@ -14,12 +14,10 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
-        node-version: [16, 18, 20]
+        node-version: ["lts/-1", "lts/*"]
     steps:
       - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.15.9
+      - uses: pnpm/action-setup@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
@@ -35,7 +33,7 @@ jobs:
         run: pnpm verify
 
       - name: codecov
-        if: matrix.node-version == 18
+        if: matrix.node-version == 'lts/*'
         uses: codecov/codecov-action@v6
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
@@ -48,12 +46,10 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.CI_GITHUB_TOKEN }}
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.15.9
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: lts/*
           cache: pnpm
 
       - name: Install Dependencies
