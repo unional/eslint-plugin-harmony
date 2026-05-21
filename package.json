@@ -36,7 +36,7 @@
 		"prepare": "husky install",
 		"prettier": "prettier spec/ts-prettier/**/*.pass.ts --write",
 		"test": "gulp",
-		"verify": "pnpm build && pnpm lint && pnpm test",
+		"verify": "pnpm build && pnpm link . && pnpm lint && pnpm test",
 		"version": "changeset version",
 		"release": "changeset publish",
 		"cs": "changeset"
