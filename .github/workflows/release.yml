@@ -1,67 +1,28 @@
 name: release
 on:
-  workflow_dispatch:
-    inputs:
-      debug_enabled:
-        type: boolean
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
-        required: false
-        default: false
   push:
     branches: [main]
-jobs:
-  verify:
-    runs-on: "ubuntu-latest"
-    strategy:
-      matrix:
-        node-version: [16, 18, 20]
-    steps:
-      - uses: actions/checkout@v6
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.15.9
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
-      - name: Install Dependencies
-        run: pnpm install
-      - run: pnpm bootstrap
-      - name: Verify
-        run: pnpm verify
 
-      - name: codecov
-        if: matrix.node-version == 18
-        uses: codecov/codecov-action@v6
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+jobs:
+  code:
+    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@v2
+    with:
+      os: '["ubuntu-latest"]'
+      skip-playwright: true
+
+  # Runs on the default branch immediately before `changeset publish`, so a tarball that
+  # trips the gate blocks the release. A `needs:` of release, so it also runs on pushes
+  # that only open or update the Version PR rather than publish. Deliberate — it fails
+  # closed.
+  publish-gate:
+    uses: cyberuni/.github/.github/workflows/pnpm-publish-gate.yml@v2
+    permissions:
+      contents: read
 
   release:
-    runs-on: ubuntu-latest
-    needs: verify
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.CI_GITHUB_TOKEN }}
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8.15.9
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: pnpm
-
-      - name: Install Dependencies
-        run: pnpm install
-      - run: pnpm bootstrap
-      - run: pnpm build
-      - name: semantic-release with CI GitHub Token
-        run: pnpm release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+    uses: cyberuni/.github/.github/workflows/pnpm-release-changeset-oidc.yml@v2
+    needs: [code, publish-gate]
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
