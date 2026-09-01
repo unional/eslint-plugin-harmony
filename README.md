@@ -48,6 +48,73 @@ npm install --save-dev eslint-plugin-harmony
 
 ## Usage
 
+`eslint-plugin-harmony` ships **two config surfaces**, because ESLint has two config formats:
+
+| Your ESLint | Config file | Use |
+|---|---|---|
+| 8.57+ | `.eslintrc` | `configs.<name>` — `"extends": "plugin:harmony/recommended"` |
+| 9.x | either | `configs.<name>` (needs `ESLINT_USE_FLAT_CONFIG=false`) or `configs.flat.<name>` |
+| 10.x | `eslint.config.js` | `configs.flat.<name>` — eslintrc no longer exists in ESLint 10 |
+
+### Flat config (ESLint 9 and 10)
+
+```js
+// eslint.config.js
+const harmony = require('eslint-plugin-harmony')
+
+module.exports = [
+  ...harmony.configs.flat.recommended
+]
+```
+
+Each entry of `configs.flat` is a **config array**, so spread it. The available names are the
+same as the eslintrc ones:
+
+`es5`, `es5-strict`, `latest`, `recommended`, `ts-prettier`, `ts-recommended`,
+`ts-recommended-cra`, `ts-recommended-type-check`, `ts-recommended-type-check-cra`,
+`ts-recommended-requiring-type-checking`.
+
+Flat config has no `env`, so supply globals yourself:
+
+```js
+const globals = require('globals')
+const harmony = require('eslint-plugin-harmony')
+
+module.exports = [
+  ...harmony.configs.flat.recommended,
+  { languageOptions: { globals: globals.node } }
+]
+```
+
+The `ts-*` flat configs need [`typescript-eslint`](https://typescript-eslint.io) v8 or later
+installed. They already scope themselves to `**/*.ts`, `**/*.tsx`, `**/*.mts` and `**/*.cts`,
+so mixed JavaScript/TypeScript projects need no `overrides` equivalent — just spread both:
+
+```js
+const harmony = require('eslint-plugin-harmony')
+
+module.exports = [
+  ...harmony.configs.flat.recommended,
+  ...harmony.configs.flat['ts-recommended']
+]
+```
+
+`ts-recommended-type-check` additionally needs a TypeScript program:
+
+```js
+module.exports = [
+  ...harmony.configs.flat['ts-recommended-type-check'],
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: { projectService: true, tsconfigRootDir: __dirname }
+    }
+  }
+]
+```
+
+### eslintrc (ESLint 8, and ESLint 9 with `ESLINT_USE_FLAT_CONFIG=false`)
+
 To use the ESLint style, extends from one of the following:
 
 ```js
@@ -63,6 +130,10 @@ To use the ESLint style, extends from one of the following:
   "extends": "plugin:harmony/ts-recommended-type-check-cra",
 }
 ```
+
+ESLint 9 still reads `.eslintrc`, but only when `ESLINT_USE_FLAT_CONFIG=false` is set, and it
+prints a deprecation warning. ESLint 10 removed the format entirely — there is no flag that
+brings it back. Move to `configs.flat` before upgrading.
 
 ### TypeScript
 
@@ -119,6 +190,17 @@ Note that for `ts-recommended-type-check` you still need to specify `parserOptio
 
 For more information, please check out [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin).
 
+### Peer dependencies
+
+This package no longer bundles `@typescript-eslint/parser`. Install what you need:
+
+```sh
+npm i -D eslint                                        # required, >= 8.57
+npm i -D typescript-eslint                             # for the flat `ts-*` configs
+npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser   # for the eslintrc `ts-*` configs
+npm i -D eslint-config-prettier                        # for `ts-prettier`
+```
+
 ### JetBrains IDE
 
 After you import the settings,
@@ -134,8 +216,13 @@ You also need to change your language version appropriately:
 
 ```sh
 pnpm i
-pnpm bootstrap
+pnpm verify   # build, typecheck, lint (with this plugin's own flat config), test
 ```
+
+The test suite lints the fixtures under `spec/<config>/` with every published config and
+asserts the rule ids and counts encoded in the filenames. `test/configs.spec.ts` covers the
+eslintrc surface, `test/flat-configs.spec.ts` the flat one, against the same fixtures — so
+the two surfaces cannot drift apart.
 
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-harmony.svg?style=flat
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony

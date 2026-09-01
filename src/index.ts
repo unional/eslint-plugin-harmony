@@ -1,4 +1,5 @@
 import es5Strict from './es5-strict.json'
+import { flat } from './flat'
 import es5 from './es5.json'
 import latest from './latest.json'
 import recommended from './recommended.json'
@@ -9,7 +10,6 @@ import tsRecommendedTypeCheckCra from './ts-recommended-type-check-cra.json'
 import tsRecommendedTypeCheck2 from './ts-recommended-requiring-type-checking.json'
 import tsRecommended from './ts-recommended.json'
 import tsRecommendedCra from './ts-recommended-cra.json'
-import {  type TSESLint } from '@typescript-eslint/experimental-utils'
 
 export = {
   configs: {
@@ -22,7 +22,8 @@ export = {
     'ts-recommended-type-check-cra': tsRecommendedTypeCheckCra,
     'ts-recommended-requiring-type-checking': tsRecommendedTypeCheck2,
     'ts-recommended': tsRecommended,
-    'ts-recommended-cra': tsRecommendedCra
+    'ts-recommended-cra': tsRecommendedCra,
+    flat
   },
   rules
 }
