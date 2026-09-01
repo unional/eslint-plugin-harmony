@@ -54,7 +54,7 @@
 		"@types/eslint": "^9.6.1",
 		"@types/node": "24.12.4",
 		"@typescript-eslint/eslint-plugin": "^6.19.0",
-		"eslint": "8.57.1",
+		"eslint": "10.9.1",
 		"eslint-config-prettier": "^10.0.0",
 		"eslint-plugin-harmony": "link:.",
 		"husky": "9.1.7",
