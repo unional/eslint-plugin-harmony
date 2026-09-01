@@ -1,4 +1,4 @@
-import { TSESTree, AST_NODE_TYPES, ESLintUtils, type TSESLint } from '@typescript-eslint/experimental-utils'
+import { TSESTree, AST_NODE_TYPES, ESLintUtils, type JSONSchema } from '@typescript-eslint/utils'
 import { createRule } from '../utils/createRule'
 
 type Delimiter = 'comma' | 'none' | 'semi'
@@ -32,13 +32,13 @@ type MessageIds =
   | 'expectedComma'
   | 'expectedSemi'
 
-const definition = {
+const definition: JSONSchema.JSONSchema4 = {
   type: 'object',
   properties: {
     multiline: {
       type: 'object',
       properties: {
-        delimiter: { enum: ['none', 'semi', 'comma'] },
+        delimiter: { type: 'string', enum: ['none', 'semi', 'comma'] },
         requireLast: { type: 'boolean' },
       },
       additionalProperties: false,
@@ -47,7 +47,7 @@ const definition = {
       type: 'object',
       properties: {
         // note can't have "none" for single line delimiter as it's invlaid syntax
-        delimiter: { enum: ['semi', 'comma'] },
+        delimiter: { type: 'string', enum: ['semi', 'comma'] },
         requireLast: { type: 'boolean' },
       },
       additionalProperties: false,
@@ -62,7 +62,6 @@ export default createRule<Options, MessageIds>({
     type: 'suggestion',
     docs: {
       description: 'Require a specific member delimiter style for interfaces and type literals',
-      recommended: 'error',
     },
     fixable: 'code',
     messages: {
@@ -100,7 +99,7 @@ export default createRule<Options, MessageIds>({
     },
   ],
   create(context, [options]) {
-    const sourceCode = context.getSourceCode()
+    const sourceCode = context.sourceCode
 
     // use the base options as the defaults for the cases
     const baseOptions = options

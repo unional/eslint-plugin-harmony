@@ -3,6 +3,9 @@
   "include": [
     "spec",
     "src",
+    "test",
+    "vitest.config.mts",
+    "eslint.config.mjs",
     "src/style-parts/*.json",
     "typings"
   ]
