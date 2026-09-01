@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "noEmit": true,
+    "target": "esnext",
+    "types": ["node"]
+  },
+  "include": [
+    "src",
+    "src/style-parts/*.json",
+    "test",
+    "typings"
+  ]
+}
