@@ -1,6 +1,4 @@
-# Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+# eslint-plugin-harmony
 
 ### [7.1.1](https://github.com/unional/eslint-plugin-harmony/compare/v7.1.0...v7.1.1) (2022-11-20)
 

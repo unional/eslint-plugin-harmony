@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-[![semantic-release][semantic-release-image]][semantic-release-url]
+[![GitHub Action][github-release]][github-action-url]
 
 [![Visual Studio Code][vscode-image]][vscode-url]
 [![phpStorm][phpStorm-image]][phpStorm-url]
@@ -141,8 +141,8 @@ pnpm bootstrap
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony
 [downloads-image]: https://img.shields.io/npm/dm/eslint-plugin-harmony.svg?style=flat
 [downloads-url]: https://npmjs.org/package/eslint-plugin-harmony
-[semantic-release-image]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-release-url]:https://github.com/semantic-release/semantic-release
+[github-release]: https://github.com/cyberuni/eslint-plugin-harmony/workflows/release/badge.svg
+[github-action-url]: https://github.com/cyberuni/eslint-plugin-harmony/actions
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]:https://code.visualstudio.com/
 [phpStorm-image]:https://img.shields.io/badge/phpStorm-ready-green.svg
