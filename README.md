@@ -141,8 +141,8 @@ pnpm bootstrap
 [npm-url]: https://npmjs.org/package/eslint-plugin-harmony
 [downloads-image]: https://img.shields.io/npm/dm/eslint-plugin-harmony.svg?style=flat
 [downloads-url]: https://npmjs.org/package/eslint-plugin-harmony
-[github-release]: https://github.com/cyberuni/eslint-plugin-harmony/workflows/release/badge.svg
-[github-action-url]: https://github.com/cyberuni/eslint-plugin-harmony/actions
+[github-release]: https://github.com/repobuddy/eslint-plugin-harmony/workflows/release/badge.svg
+[github-action-url]: https://github.com/repobuddy/eslint-plugin-harmony/actions
 [vscode-image]:https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]:https://code.visualstudio.com/
 [phpStorm-image]:https://img.shields.io/badge/phpStorm-ready-green.svg
